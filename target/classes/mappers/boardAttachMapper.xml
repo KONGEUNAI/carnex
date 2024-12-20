@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.carnex.mappers.boardAttachMapper">
+
+	<select id="findByBno" parameterType="int" resultType="org.carnex.board.vo.BoardAttachVO">
+		select uuid, uploadPath, fileName, fileType, bno
+		from attach_tbl
+		where bno = #{bno}
+	</select>
+	<!--
+	<select id="getOldFiles" resultType="org.nextway.domain.BoardAttachVO">
+		select uuid, uploadPath, fileName, fileType, bno
+		from tbl_attach
+		where uploadPath = to_char(sysdate -1, 'yyyy\mm\dd')
+	</select>
+	-->
+	<insert id="insert" parameterType="org.carnex.board.vo.BoardAttachVO">
+		insert into attach_tbl (uuid, uploadPath, fileName, fileType, bno)
+		values (#{uuid}, #{uploadPath}, #{fileName}, #{fileType}, #{bno})
+	</insert>
+	
+	<delete id="delete" parameterType="String">
+		delete from attach_tbl
+		where uuid = #{uuid}
+	</delete>
+	
+	<delete id="deleteAll" parameterType="int">
+		delete from attach_tbl
+		where bno = #{bno}
+	</delete>
+
+</mapper>

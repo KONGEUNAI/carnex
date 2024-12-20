@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.carnex.mappers.board">
+
+	<insert id="register" parameterType="org.carnex.board.vo.BoardVO">
+		INSERT INTO board_tbl (
+			title
+			, content
+			, writer
+			, user_id
+			, staff_id
+			, reg_date
+		) VALUES (
+			#{title}
+			, #{content}
+			, #{writer}
+			, #{user_id}
+			, #{staff_id}
+			, now()
+		)
+	</insert>
+	<select id="getBoardList" parameterType="hashMap" resultType="org.carnex.board.vo.BoardVO">
+		SELECT * FROM board_tbl 
+		
+		<if test='searchType.equals("title")'>
+			WHERE title LIKE CONCAT('%', #{keyword}, '%')
+		</if>
+		
+		<if test='searchType.equals("title_writer")'>
+			WHERE title LIKE CONCAT('%', #{keyword}, '%')
+				OR writer LIKE CONCAT('%', #{keyword}, '%')
+		</if>
+		
+		<if test='searchType.equals("writer")'>
+			WHERE writer LIKE CONCAT('%', #{keyword}, '%')
+		</if>
+		
+		ORDER BY bno DESC limit #{displayPost}, #{postNum}
+	</select>
+	
+	<select id="staffBoardList" parameterType="hashMap" resultType="org.carnex.board.vo.BoardVO">
+		SELECT * FROM board_tbl 
+		
+		<if test='searchType.equals("title")'>
+			WHERE title LIKE CONCAT('%', #{keyword}, '%')
+		</if>
+		
+		<if test='searchType.equals("title_writer")'>
+			WHERE title LIKE CONCAT('%', #{keyword}, '%')
+				OR writer LIKE CONCAT('%', #{keyword}, '%')
+		</if>
+		
+		<if test='searchType.equals("writer")'>
+			WHERE writer LIKE CONCAT('%', #{keyword}, '%')
+		</if>
+		
+		ORDER BY bno DESC
+	</select>
+	
+	<select id="getCount" parameterType="hashMap" resultType="int">
+		SELECT COUNT(*) FROM board_tbl
+		
+		<if test='searchType.equals("title")'>
+			WHERE title LIKE CONCAT('%', #{keyword}, '%')
+		</if>
+		
+		<if test='searchType.equals("title_writer")'>
+			WHERE title LIKE CONCAT('%', #{keyword}, '%')
+				OR writer LIKE CONCAT('%', #{keyword}, '%')
+		</if>
+		
+		<if test='searchType.equals("writer")'>
+			WHERE writer LIKE CONCAT('%', #{keyword}, '%')
+		</if>
+	</select>
+	
+	<select id="getBoardOne" resultType="org.carnex.board.vo.BoardVO">
+		SELECT * FROM board_tbl WHERE bno = #{bno}
+	</select>
+	
+	<update id="upCount">
+		UPDATE board_tbl SET viewcnt = viewcnt+1 WHERE bno = #{bno}
+	</update>
+	
+	<update id="update" parameterType="org.carnex.board.vo.BoardVO">
+		UPDATE board_tbl SET 
+			title = #{title}
+			, content = #{content}
+			, up_date = now()
+		WHERE bno = #{bno}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM board_tbl WHERE bno = #{bno}
+	</delete>
+	
+	<select id="getBoardNum" resultType="int">
+		select bno from board_tbl
+		order by bno desc
+		limit 0, 1
+	</select>
+	
+	<update id="upReplyCnt">
+		update board_tbl set
+			replycnt = replycnt + 1
+		where bno = #{bno}
+	</update>
+	<!--
+	<update id="downReplyCnt" parameterType="hashMap">
+		update tbl_board set
+			replyCnt = replyCnt + #{amount}
+		where bno = #{bno}
+	</update>
+	-->
+	<update id="downReplyCnt">
+		update board_tbl set
+			replycnt = replycnt - 1
+		where bno = #{bno}
+	</update>
+</mapper>

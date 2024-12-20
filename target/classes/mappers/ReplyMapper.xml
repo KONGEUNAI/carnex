@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.carnex.mappers.reply">
+
+	<insert id="write" parameterType="org.carnex.board.vo.ReplyVO">
+		INSERT INTO reply_tbl (
+			bno
+			, content
+			, writer
+			, user_id
+			, staff_id
+			, reg_date
+		) VALUES (
+			#{bno}
+			, #{content}
+			, #{writer}
+			, #{user_id}
+			, #{staff_id}
+			, now()
+		)
+	</insert>
+
+	<select id="getReplyList" resultType="org.carnex.board.vo.ReplyVO">
+		SELECT * FROM reply_tbl WHERE bno = #{bno}
+	</select>
+	
+	<select id="getReplyOne" parameterType="org.carnex.board.vo.ReplyVO" resultType="org.carnex.board.vo.ReplyVO">
+		SELECT * FROM reply_tbl WHERE bno = #{bno} AND rno = #{rno}
+	</select>
+	
+	<delete id="boardReplyDelete" parameterType="int" >
+	    delete from reply_tbl
+	    where bno = #{bno}
+	</delete>
+	
+	<update id="modify" parameterType="org.carnex.board.vo.ReplyVO">
+		update reply_tbl set
+			content = #{content}
+			, user_id = #{user_id}
+			, staff_id = #{staff_id}
+			, up_date = now()
+		where rno = #{rno} and bno = #{bno}
+	</update>
+	
+	<delete id="delete" parameterType="org.carnex.board.vo.ReplyVO">
+		delete from reply_tbl
+	    where rno = #{rno} and bno = #{bno}
+	</delete>
+	
+	<select id="getUserReplyAll" resultType="org.carnex.board.vo.ReplyVO">
+		SELECT * FROM reply_tbl WHERE user_id = #{user_id}
+	</select>
+	
+</mapper>

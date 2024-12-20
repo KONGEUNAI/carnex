@@ -1,0 +1,344 @@
+@charset "UTF-8";
+
+@media screen and (min-width:1400px) {
+  h4 {font-size:42px;}
+  h5 {font-size:24px;}
+  section {margin: 100px auto;}
+	
+  .card-title {margin: 0 auto 20px; width: 1300px;}
+  .card-title p {padding-top: 10px;}
+  .card-search {display:flex; padding-bottom:40px;}
+  .btn-info {width:50px; margin-left:5px; color:#f6f6f6; background:#a6a6a6; border-radius:4px;}
+  .wrapper {
+    display: flex;  justify-content: space-between;
+    margin: 0 auto; width: 1300px;
+  }
+  .card-wrap {display: flex; justify-content: space-between; flex-wrap: wrap; width: 900px;}
+  .card-wrap li {display: flex;}
+  .card-wrap li p {margin-left:5px;}
+  .card {
+    position: relative; width: 440px; height: 300px; margin-bottom: 20px;
+    border: 3px solid #f6f6f6; border-radius: 20px; 
+    transition: all 0.4s ease-in-out; cursor: pointer;
+  }
+  .card:hover {box-shadow: 5px 3px 5px #000000a2;}
+  .card-1 {background: url('/resources/images/card-storage/card-01.jpg');}
+  .card-2 {background: url('/resources/images/card-storage/card-02.jpg');}
+  .card-3 {background: url('/resources/images/card-storage/card-03.jpg');}
+
+  .input-frm {display:block; height:34px; padding:0 20px; border-radius:4px;}
+  .input-mb {background:#f6f6f6;}
+  .input-mb::placeholder {color: #a6a6a6;}
+  .radio {position: absolute; right: 20px; top: 20px;}
+  input[type="radio"] {
+    appearance: none; width: 30px; height: 30px;
+    background-color: #d6d6d6; border-radius: 3px;
+    cursor: pointer; outline: none;
+  }
+
+  input[type="radio"]:checked,
+  input[type="radio"]:checked:hover {
+    background-color: blue;
+  }
+
+  input[type="radio"]:hover {
+    background-color: #ddd;
+  }
+
+  .card-txt {
+    position: absolute; padding: 15px; bottom: 4px; left: 10px;
+  }
+  .card-txt li {
+    width: 250px; height: 30px; line-height: 30px; color: #333;
+    background: #F6F6F6; margin-bottom: 4px; padding-left: 8px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.6) inset;
+  }
+
+  .info {
+    position: sticky; top: 20%; 
+    width: 380px; height: 570px;
+    text-align: center;
+    border: 3px solid rgb(255, 255, 255); border-radius: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.6) inset;
+  }
+  #filter-trigger {display: none;}
+  .info > h5 {margin-top: 25px;}
+  .info-car {height: 290px; text-align: center; border-bottom: 2px dashed #d9d9d9;}
+  .info-car img {
+    width: 374px; height: 160px; object-fit: cover;
+  }
+  .info-car p {font-size: 24px; padding-top: 9px;}
+  .info-car-txt {width: 320px; margin: 9px auto 0;}
+  .info-txt {margin-top: 14px;}
+	.info-txt li {display:flex; justify-content:center;}
+  .btn {margin: 40px auto 0; width: 300px;}
+}
+
+
+
+
+@media screen and (min-width:1050px) and (max-width:1399px) {
+  h4 {font-size:42px;}
+  h5 {font-size:24px;}
+  section {margin: 100px auto;}
+
+  .card-title {margin: 0 auto 20px; width: 1000px;}
+  .card-title p {padding-top: 10px;}
+  .card-search {display:flex; padding-bottom:40px;}
+  .btn-info {width:50px; margin-left:5px; color:#f6f6f6; background:#a6a6a6; border-radius:4px;}
+  .wrapper {
+    display: flex;  justify-content: space-between;
+    margin: 0 auto; width: 1000px;;
+  }
+  .card-wrap {display: flex; justify-content: space-between; flex-wrap: wrap; width: 900px;}
+  .card-wrap li {display: flex;}
+  .card-wrap li p {margin-left:5px;}
+  .card {
+    position: relative; width: 600px; height: 380px; margin-bottom: 20px;
+    border: 3px solid #f6f6f6; border-radius: 20px; 
+    transition: all 0.4s ease-in-out; cursor: pointer;
+  }
+  .card:hover {box-shadow: 5px 3px 5px #000000a2;}
+  .card-1 {
+    background: url('/resources/images/card-storage/card-01.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .card-2 {
+    background: url('/resources/images/card-storage/card-02.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .card-3 {
+    background: url('/resources/images/card-storage/card-03.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  .radio {position: absolute; right: 20px; top: 20px;}
+
+  .input-frm {display:block; height:34px; padding:0 20px; border-radius:4px;}
+  .input-mb {background:#f6f6f6;}
+  .input-mb::placeholder {color: #a6a6a6;}
+  input[type="radio"] {
+    appearance: none; width: 30px; height: 30px;
+    background-color: #d6d6d6; border-radius: 3px;
+    cursor: pointer; outline: none;
+  }
+
+  input[type="radio"]:checked,
+  input[type="radio"]:checked:hover {
+    background-color: blue;
+  }
+
+  input[type="radio"]:hover {
+    background-color: #ddd;
+  }
+
+  .card-txt {
+    position: absolute; padding: 15px; bottom: 4px; left: 10px;
+  }
+  .card-txt li {
+    width: 250px; height: 30px; line-height: 30px; color: #333;
+    background: #F6F6F6; margin-bottom: 4px; padding-left: 8px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.6) inset;
+  }
+
+  .info {
+    position: sticky; top: 20%; 
+    width: 380px; height: 570px;
+    text-align: center;
+    border: 3px solid rgb(255, 255, 255); border-radius: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.6) inset;
+  }
+  #filter-trigger {display: none;}
+  .info > h5 {margin-top: 25px;}
+  .info-car {height: 290px; text-align: center; border-bottom: 2px dashed #d9d9d9;}
+  .info-car img {
+    width: 374px; height: 160px; object-fit: cover;
+  }
+  .info-car p {font-size: 24px; padding-top: 9px;}
+  .info-car-txt {width: 320px; margin: 9px auto 0;}
+  .info-txt {margin-top: 14px;}
+	.info-txt li {display:flex; justify-content:center;}
+  .btn {margin: 40px auto 0; width: 300px;}
+}
+
+
+
+
+@media screen and (min-width:760px) and (max-width:1049px) {
+  h4 {font-size:42px;}
+  h5 {font-size:24px;}
+  section {margin: 100px auto;}
+
+  .card-title {margin: 0 auto 20px; width: 730px;}
+  .card-title p {padding-top: 10px;}
+  .card-search {display:flex; padding-bottom:40px;}
+  .btn-info {width:50px; margin-left:5px; color:#f6f6f6; background:#a6a6a6; border-radius:4px;}
+  .wrapper {
+    margin: 0 auto; width: 730px;
+  }
+  .card-wrap {display: flex; justify-content: space-between; flex-wrap: wrap; width: 730px;}
+  .card-wrap li {display: flex;}
+  .card-wrap li p {margin-left:5px;}
+  .card {
+    position: relative; width: 350px; height: 240px; margin-bottom: 20px;
+    border: 3px solid #f6f6f6; border-radius: 8px; 
+    transition: all 0.4s ease-in-out; cursor: pointer;
+  }
+  .card:hover {box-shadow: 5px 3px 5px #000000a2;}
+  .card-1 {
+    background: url('/resources/images/card-storage/card-01.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .card-2 {
+    background: url('/resources/images/card-storage/card-02.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .card-3 {
+    background: url('/resources/images/card-storage/card-03.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  .radio {position: absolute; right: 20px; top: 20px;}
+  .input-frm {display:block; height:34px; padding:0 20px; border-radius:4px;}
+  .input-mb {background:#f6f6f6;}
+  .input-mb::placeholder {color: #a6a6a6;}
+  input[type="radio"] {
+    appearance: none; width: 30px; height: 30px;
+    background-color: #d6d6d6; border-radius: 3px;
+    cursor: pointer; outline: none;
+  }
+
+  input[type="radio"]:checked,
+  input[type="radio"]:checked:hover {
+    background-color: blue;
+  }
+
+  input[type="radio"]:hover {
+    background-color: #ddd;
+  }
+
+  .card-txt {
+    position: absolute; padding: 15px; bottom: 4px; left: 10px;
+  }
+  .card-txt li {
+    width: 250px; height: 30px; line-height: 30px; color: #333;
+    background: #F6F6F6; margin-bottom: 4px; padding-left: 8px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.6) inset;
+  }
+
+  .info {
+    position: sticky; bottom: -480px; 
+    width: 100%; height: 570px;
+    text-align: center; background: #222;
+    border: 3px solid rgb(255, 255, 255); border-radius: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.6) inset;
+    transition: all 0.4s ease-in;
+  }
+
+  #filter-trigger {margin-top: 20px; font-size: 24px;}
+	.active {bottom: 0;}
+	.off {display: none;}
+
+  .info > h5 {margin-top: 25px;}
+  .info-car {height: 290px; text-align: center; border-bottom: 2px dashed #d9d9d9;}
+  .info-car img {
+    margin: 10px auto; width: 380px; height: 160px; object-fit: contain;
+  }
+  .info-car p {font-size: 24px; padding-top: 9px;}
+  .info-car-txt {width: 320px; margin: 9px auto 0;}
+  .info-txt {margin-top: 14px;}
+	.info-txt li {display:flex; justify-content:center;}
+  .btn {margin: 20px auto 0; width: 300px;}
+}
+
+
+
+@media screen and (max-width:759px){
+  h4 {font-size:42px;}
+  h5 {font-size:24px;}
+  section {margin: 100px auto; padding: 0 10px;}
+
+  .card-title {margin: 0 auto 20px;}
+  .card-title p {padding-top: 10px;}
+  .card-search {display:flex; padding-bottom:40px;}
+  .btn-info {width:50px; margin-left:5px; color:#f6f6f6; background:#a6a6a6; border-radius:4px;}
+  .wrapper {
+    margin: 0 auto;
+  }
+  .card {
+    position: relative; width: 100%; height: 340px; margin-bottom: 20px;
+    border: 3px solid #f6f6f6; border-radius: 8px; 
+    transition: all 0.4s ease-in-out; cursor: pointer;
+  }
+  .card-wrap li {display: flex;}
+  .card-wrap li p {margin-left:5px;}
+  .card:hover {box-shadow: 5px 3px 5px #000000a2;}
+  .card-1 {
+    background: url('/resources/images/card-storage/card-01.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .card-2 {
+    background: url('/resources/images/card-storage/card-02.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .card-3 {
+    background: url('/resources/images/card-storage/card-03.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  .radio {position: absolute; right: 20px; top: 20px;}
+  .input-frm {display:block; height:34px; padding:0 20px; border-radius:4px;}
+  .input-mb {background:#f6f6f6;}
+  .input-mb::placeholder {color: #a6a6a6;}
+  input[type="radio"] {
+    appearance: none; width: 30px; height: 30px;
+    background-color: #d6d6d6; border-radius: 3px;
+    cursor: pointer; outline: none;
+  }
+
+  input[type="radio"]:checked,
+  input[type="radio"]:checked:hover {
+    background-color: blue;
+  }
+
+  input[type="radio"]:hover {
+    background-color: #ddd;
+  }
+
+  .card-txt {
+    position: absolute; padding: 15px; bottom: 4px; left: 10px;
+  }
+  .card-txt li {
+    width: 250px; height: 30px; line-height: 30px; color: #333;
+    background: #F6F6F6; margin-bottom: 4px; padding-left: 8px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.6) inset;
+  }
+
+  .info {
+    position: sticky; bottom: -480px; 
+    width: 100%; height: 570px;
+    text-align: center; background: #222;
+    border: 3px solid rgb(255, 255, 255); border-radius: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.6) inset;
+    transition: all 0.4s ease-in;
+  }
+
+  #filter-trigger {margin-top: 20px; font-size: 24px;}
+	.active {bottom: 0;}
+	.off {display: none;}
+
+  .info > h5 {margin-top: 25px;}
+  .info-car {height: 290px; text-align: center; border-bottom: 2px dashed #d9d9d9;}
+  .info-car img {
+    margin: 10px auto; width: 380px; height: 160px; object-fit: contain;
+  }
+  .info-car p {font-size: 24px; padding-top: 9px;}
+  .info-car-txt {width: 320px; margin: 9px auto 0;}
+  .info-txt {margin-top: 14px;}
+	.info-txt li {display:flex; justify-content:center;}
+  .btn {margin: 20px auto 0; width: 300px;}
+}

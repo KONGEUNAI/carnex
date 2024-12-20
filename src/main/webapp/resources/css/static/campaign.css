@@ -1,0 +1,167 @@
+@charset "utf-8";	
+
+	.slides li {position:relative;}
+	body:has(.flexslider.cp) {overflow-x:hidden;}
+	.flexslider.cp {margin-top: 60px;}
+	.cp .flex-direction-nav a {color: rgba(255,255,255,1);}
+	
+	.flex-direction-nav a {height:80px;}
+	.flex-nav-prev i, .flex-nav-next i {font-size:40px;}
+	.flex-direction-nav .flex-prev {top:155px;}
+	.flex-direction-nav .flex-next {top:155px;}
+
+	.flex-control-nav {bottom: -35px;}
+	.flex-control-nav li a {background:#767676;}
+	.flex-control-nav li a.flex-active {background:#f6f6f6;}
+
+	.bn {background: url('/resources/images/campaign/bn-cp-bg.jpg'); background-size:cover;}
+	
+	.cp-mo-mou-bg, .cp-mo-RE100-bg {background:no-repeat center center; border-radius:10px;}
+
+	.cp-mo-mou-bg {
+		background:url('/resources/images/campaign/cp-mo-mou-bg-small.png')no-repeat center center;
+		background-size:cover;
+	}
+	.cp-mo-RE100-bg {
+		background:url('/resources/images/campaign/cp-mo-RE100-bg-small.png')no-repeat center center;
+		background-size:cover; 
+	}
+
+	.cp-traffic-law-bg1 {background: url('/resources/images/campaign/cp-traffic-law-bg1.png') no-repeat center center;}
+	.cp-traffic-law-bg2 {background: url('/resources/images/campaign/cp-traffic-law-bg2.png') no-repeat center center;}
+	.cp-traffic-law-bg3 {background: url('/resources/images/campaign/cp-traffic-law-bg3.png') no-repeat center center;}
+
+	.cp-btn {
+		width:130px; height:50px; margin:40px auto; text-align:center; line-height:48px;
+		border:2px solid #f6f6f6; border-radius:25px; transition:all 0.3s ease-in;
+	}
+	.cp-btn:hover {color:#222; background:#f6f6f6;}
+
+	@media screen and (min-width:1400px) {
+		.cp-wrap {display:flex; justify-content:space-between; margin-top:60px;}
+		
+		/*===== Safe Driving =====*/
+		.cp-safe-video > video {width:900px; border-radius:10px;}
+		.cp-safe-wrap {width:340px; padding-top:100px; color:#f6f6f6;}
+		.cp-safe-txt1, .cp-safe-txt2 {padding-top:40px;}
+		
+		
+		/*===== Sustaina Mobility=====*/
+		.cp-mo-mou-bg {width:700px; height:300px;}
+		.cp-mo-mou {padding:70px 0 0 105px;}
+		.cp-mo-mou, .cp-mo-RE100 {width:600px; height:250px; text-align:center;}
+		.cp-mo-mou p, .cp-mo-RE100 p {width:350px; margin:0 auto; padding-top:40px;}
+		.cp-mo-mou-bg {
+			background:url('/resources/images/campaign/cp-mo-mou-bg.png');
+			background-size:cover;
+		}
+
+		.cp-mo-RE100-bg {
+			background:url('/resources/images/campaign/cp-mo-RE100-bg.png');
+			background-size:cover; 
+		}
+		.cp-mo-RE100-bg {width:700px; height:300px;}
+		.cp-mo-RE100 {padding:70px 105px 0 0;}
+		.cp-RE100-bar {width:250px; height:2px; margin:60px auto; background:#eee;}
+		.cp-re100-wrap {
+			width:900px; margin:0 auto; padding:30px 80px; text-align:center;
+			background:#666; border-radius:10px;
+		}
+	
+		/*===== Traffic Law Challenge =====*/
+		.cp-traffic-law {height:300px; margin-bottom: 100px;}
+
+		.flex-control-nav {bottom: 65px;}
+		.flex-control-nav li a {background:#767676;}
+		.flex-control-nav li a.flex-active {background:#f6f6f6;}
+	}	
+
+@media screen and (min-width:1000px) and (max-width:1399px) {
+	.cp-wrap {display:flex; justify-content:space-between; margin-top:50px;}
+		
+	/*===== Safe Driving =====*/
+	.cp-safe-video > video {width:650px; border-radius:10px;}
+	.cp-safe-wrap {width:300px; padding-top:60px; color:#f6f6f6;}
+	.cp-safe-txt1, .cp-safe-txt2 {padding-top:25px;}
+	
+	/*===== Sustaina Mobility=====*/
+	.cp-mo-mou {padding:70px 0 0 105px;}
+	.cp-mo-RE100 {padding:70px 105px 0 0;}
+	.cp-mo-mou, .cp-mo-RE100 {width:600px; height:250px; text-align:center;}
+	.cp-mo-mou p, .cp-mo-RE100 p {width:350px; margin:0 auto; padding-top:40px;}
+	.cp-mo-mou-bg {width:700px; height:300px;}
+	.cp-mo-RE100-bg {width:700px; height:300px;}
+	.cp-RE100-bar {width:250px; height:2px; margin:60px auto; background:#eee;}
+	.cp-re100-wrap {
+		width:1000px; height:80px; margin:0 auto; padding:20px 100px; text-align:center;
+		background:#666; border-radius:10px;
+	}
+	
+	/*===== Traffic Law Challenge =====*/
+	.cp-traffic-law {height: 300px;}
+}
+
+@media screen and (min-width:760px) and (max-width:1049px) {
+	/*===== Safe Driving =====*/
+	.cp-wrap {display:flex; justify-content:space-between; width:730px; margin:50px auto 0;}
+	.cp-safe-video > video {width:450px; border-radius:10px;}
+	.cp-safe-wrap {width:250px; padding-top:5px; color:#f6f6f6;}
+	.cp-safe-txt1, .cp-safe-txt2 {padding-top:20px;}
+	.cp-btn {margin:25px auto;}
+
+	/*===== Sustaina Mobility=====*/
+	.cp-sm-container {
+		display:flex; justify-content:space-between;
+		width:730px; margin:0 auto;
+	}
+	.cp-sm-container .cp-wrap {display:block; width:350px;}
+	.cp-sm-container .cp-wrap:nth-child(1) {margin-right:15px;}
+	.cp-sm-container .cp-wrap:nth-child(2) {margin-left:15px;}
+	.cp-sm-container .cp-wrap .cp-mo-mou-bg,
+	.cp-sm-container .cp-wrap .cp-mo-RE100-bg {width:100%; height:300px;}
+	.cp-sm-container .cp-wrap .cp-mo-mou,
+	.cp-sm-container .cp-wrap .cp-mo-RE100 {width:100%; padding:30px 20px; text-align:center;}
+	.cp-sm-container .cp-wrap .cp-mo-mou p,
+	.cp-sm-container .cp-wrap .cp-mo-RE100 p	{width:100%; padding:30px 0; text-align:center;}
+	
+	.cp-RE100-bar {width:250px; height:2px; margin:60px auto; background:#eee;}
+	
+	.cp-re100-wrap {
+		width:650px; height:95px; margin:0 auto; padding:20px 50px; text-align:center;
+		background:#666; border-radius:10px;
+	}
+	
+	.cp-traffic-law {height: 300px; border-radius: 10px;}
+
+}
+
+@media screen and (max-width:759px) {
+	.cp-wrap {width:350px; margin:50px auto 0;}
+		
+	/*===== Safe Driving =====*/
+	.cp-safe-video > video {width:100%; border-radius:10px;}
+	.cp-safe-wrap {width:350px; padding-top:30px; color:#f6f6f6; text-align:center;}
+	.cp-safe-txt1, .cp-safe-txt2 {width:300px; margin:0 auto; padding-top:20px;}
+	
+	/*===== Sustaina Mobility=====*/
+	.cp-mb-title {margin-top:-50px;}
+	.cp-mo-mou, .cp-mo-RE100 {padding-top:30px; text-align:center;}
+	.cp-mo-mou p, .cp-mo-RE100 p {padding-top:20px;}
+	.cp-mo-mou-bg, .cp-mo-RE100-bg {height:250px;}
+	.cp-mo-RE100 p {padding-bottom:50px;}
+	
+	.cp-RE100-bar {width:250px; height:2px; margin:50px auto; background:#eee;}
+	
+	.cp-re100-wrap {
+		width:350px; margin:0 auto; padding:20px 30px; text-align:center;
+		background:#666; border-radius:10px;
+	}
+	
+	/*===== Traffic Law Challenge =====*/
+	.cp-sm-title {width:300px; margin:0 auto; line-height:42px;}
+	.cp-traffic-law {height:300px;}
+
+	.cp-traffic-law-bg1 {background: url('/resources/images/campaign/cp-traffic-law-bg1-mb.png') no-repeat center center;}
+	.cp-traffic-law-bg2 {background: url('/resources/images/campaign/cp-traffic-law-bg2-mb.png') no-repeat center center;}
+	.cp-traffic-law-bg3 {background: url('/resources/images/campaign/cp-traffic-law-bg3-mb.png') no-repeat center center;}
+}

@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+section {margin-top: 120px;}
+/*===========prev+next button==========*/
+.flex-direction-nav {display: none;}
+
+/*===========control button==========*/
+
+.flex-control-nav li img.flex-active {
+  color: rgba(255,255,255,0);
+  border: 4px solid #ecd75d;
+}
+
+.flex-control-nav li img:hover {
+  color: rgba(255,255,255,0);
+  border: 4px solid #ecd75d;
+}
+
+
+
+h4 {font-size:28px;}
+h5 {font-size:20px;}
+
+@media screen and (min-width:1400px) {
+  /* ========== content-wrap-01 */
+  .info-wrap-01 {display: flex; justify-content: space-between; width: 800px;}
+
+  .content-container {display: flex;}
+  .flex-control-nav {display: flex; width: 400px;}
+  .flex-control-nav li img {
+    display: block; width: 100px; height: 100px;
+    color: rgba(255,255,255,0); font-display: none;
+    clip: rect(0 0 0 0);
+  }
+  .flexslider {width:400px; height: 500px; overflow:hidden;}
+  .flex-control-thumbs {flex-wrap: wrap;}
+  .slides li img {
+    display: block; width: 400px; height: 400px;
+    object-fit: cover;
+  }
+
+  .info-wrap-01 {margin-bottom: 20px;}
+  .content-container {display: flex; justify-content: space-between;}
+  .info-car-txt, .info-submit {
+    width: 430px; padding: 40px 20px; 
+    border: 2px solid #f6f6f6;
+    border-radius: 10px;
+  }
+  .info-car-icon {display: flex; justify-content: space-between; text-align: center; margin-top: 40px;}
+  .info-car-icon li div {
+    width: 80px; height: 80px; margin-bottom: 10px;
+    font-size: 40px; color: #333; line-height: 78px;
+    background: #e3e3e3; cursor: pointer;
+    border-radius: 50%; 
+  }
+  .info-car-icon li div:hover {color: #f6f6f6; background: none; border: 2px solid #f6f6f6;}
+
+  .info-car-benefit {margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;}
+  .info-car-benefit li {display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;}
+  .info-car-benefit li:last-child {margin-bottom: 0;}
+  .info-car-benefit li h5 {margin: 0 auto;}
+  .info-car-benefit li button {height: 28px;}
+
+  .info-submit input {padding-left: 20px;}
+  .submit-seller-info {text-align: center; margin: 10px auto;}
+  .submit-seller-info img {display: inline-block; width: 80px; height: 80px; border-radius: 40px;}
+  .submit-seller-info p {padding-top: 5px;}
+
+  .info-time {margin-bottom: 20px;}
+  .info-time input:nth-child(2) {margin: 10px auto;}
+
+  .info-btn {margin: 10px auto 0; width: 340px;}
+
+  /* ========== content-wrap-02 */
+  .content-wrap-02 {display: flex; justify-content: space-between; margin-top: 120px;}
+  .diagnosis-01 > h4, .diagnosis-02 > h4, .diagnosis-03 > h4 {margin-bottom: 20px;}
+  .diagnosis-01 > p {text-align: center; margin: 20px auto;}
+  .diagnosis-wrap {margin: 0 auto; width: 300px;}
+  .diagnosis-wrap h5 {
+    padding: 8px 18px; 
+    border: 1px solid #f6f6f6;
+    border-radius: 20px;
+  }
+
+  .diagnosis-info ul li {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f6f6f6;
+  }
+  .diagnosis-info ul li p:first-child {padding-left: 10px;}
+  .diagnosis-info ul li p:last-child {padding-right: 10px;}
+  .diagnosis-02 {width: 100%; margin: 0 20px;}
+  .diagnosis-03 {width: 100%;}
+
+  /* ========== content-wrap-03 */
+  .content-wrap-03 {margin-top: 120px;}
+  .content-wrap-03 h4 {margin-bottom: 20px;}
+  .content-wrap-03 ul {display: flex;}
+  .content-wrap-03 ul li {
+    width: 100%; height: 200px; padding: 60px 40px;
+    border: 1px solid #f6f6f6; 
+    border-radius: 10px;
+  }
+  .event-txt {display: flex; justify-content: space-between; align-items: center;}
+  .event-txt img {
+    display: inline-block; width: 80px; height: 80px;
+    object-fit: cover;
+  }
+  .event-02 {margin: 0 20px;}
+
+  /* ========== content-wrap-04 */
+  .content-wrap-04 {margin-top: 120px;}
+  .content-wrap-04 > h4 {margin-bottom: 20px;}
+
+  .seller-info {display: flex; align-items: center;}
+  .seller-info img {display: inline-block; margin-right: 20px; width: 80px; height: 80px; border-radius: 40px;}
+  .seller-info-txt p:first-child {padding-bottom: 10px;}
+  .list-area {margin-top: 20px; padding: 40px; background: rgba(255,255,255,0.1);}
+}
+
+
+
+
+@media screen and (min-width:1050px) and (max-width:1399px) {
+  /* ========== content-wrap-01 */
+
+  .flex-control-nav {display: flex; width: 400px;}
+  .flex-control-nav li img {
+    display: block; width: 100px; height: 100px;
+    color: rgba(255,255,255,0); font-display: none;
+    clip: rect(0 0 0 0);
+  }
+  .flexslider {width:400px; height: 500px; overflow:hidden;}
+  .flex-control-thumbs {flex-wrap: wrap;}
+  .slides li img {
+    display: block; width: 400px; height: 400px;
+    object-fit: cover;
+  }
+
+  .content-info {width: 880px;}
+  .info-wrap-01, .info-wrap-02 {display: flex; justify-content: space-between;}
+  .info-wrap-01 {margin-bottom: 20px;}
+  .info-car-txt, .info-submit {
+    width: 430px; padding: 20px; 
+    border: 2px solid #f6f6f6;
+    border-radius: 10px;
+  }
+  .info-car-icon {display: flex; justify-content: space-between; text-align: center; margin-top: 40px;}
+  .info-car-icon li div {
+    width: 80px; height: 80px; margin-bottom: 10px;
+    font-size: 40px; color: #333; line-height: 78px;
+    background: #e3e3e3; cursor: pointer;
+    border-radius: 50%; 
+  }
+  .info-car-icon li div:hover {color: #f6f6f6; background: none; border: 2px solid #f6f6f6;}
+
+  .info-car-benefit {margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;}
+  .info-car-benefit li {display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;}
+  .info-car-benefit li:last-child {margin-bottom: 0;}
+  .info-car-benefit li h5 {margin: 0 auto;}
+  .info-car-benefit li button {height: 28px;}
+
+  .info-submit input {padding-left: 20px;}
+  .submit-seller-info {text-align: center; margin: 10px auto;}
+  .submit-seller-info img {display: inline-block; width: 80px; height: 80px; border-radius: 40px;}
+  .submit-seller-info p {padding-top: 5px;}
+
+  .info-time {margin-bottom: 20px;}
+  .info-time input:nth-child(2) {margin: 10px auto;}
+
+  .info-btn {margin: 10px auto 0; width: 340px;}
+
+  /* ========== content-wrap-02 */
+  .content-wrap-02 {display: flex; justify-content: space-between; margin-top: 120px;}
+  .diagnosis-01 > h4, .diagnosis-02 > h4, .diagnosis-03 > h4 {margin-bottom: 20px;}
+  .diagnosis-01 > p {text-align: center; margin: 20px auto;}
+  .diagnosis-wrap {margin: 0 auto; width: 300px;}
+  .diagnosis-wrap h5 {
+    padding: 8px 18px; 
+    border: 1px solid #f6f6f6;
+    border-radius: 20px;
+  }
+
+  .diagnosis-info ul li {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f6f6f6;
+  }
+  .diagnosis-info ul li p:first-child {padding-left: 10px;}
+  .diagnosis-info ul li p:last-child {padding-right: 10px;}
+  .diagnosis-02 {width: 100%; margin: 0 20px;}
+  .diagnosis-03 {width: 100%;}
+
+  /* ========== content-wrap-03 */
+  .content-wrap-03 {margin-top: 120px;}
+  .content-wrap-03 h4 {margin-bottom: 20px;}
+  .content-wrap-03 ul {display: flex;}
+  .content-wrap-03 ul li {
+    width: 100%; height: 200px; padding: 60px 40px;
+    border: 1px solid #f6f6f6; 
+    border-radius: 10px;
+  }
+  .event-txt {display: flex; justify-content: space-between; align-items: center;}
+  .event-txt img {
+    display: inline-block; width: 80px; height: 80px;
+    object-fit: cover;
+  }
+  .event-02 {margin: 0 20px;}
+
+  /* ========== content-wrap-04 */
+  .content-wrap-04 {margin-top: 120px;}
+  .content-wrap-04 > h4 {margin-bottom: 20px;}
+
+  .seller-info {display: flex; align-items: center;}
+  .seller-info img {display: inline-block; margin-right: 20px; width: 80px; height: 80px; border-radius: 40px;}
+  .seller-info-txt p:first-child {padding-bottom: 10px;}
+  .list-area {margin-top: 20px; padding: 40px; background: rgba(255,255,255,0.1);}
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.contract.mappers.goods">
+
+	<insert id="writeContract" parameterType="hashMap">
+		INSERT INTO contract_tbl (
+			car_num
+			, staff_id
+			, card_num
+			, user_id
+			, con_sign
+			, con_status
+			, con_reg_date
+		) VALUES (
+			#{gvo.car_num}
+			, #{gvo.staff_id}
+			, #{cvo.card_num}
+			, #{mvo.user_id}
+			, #{sign}
+			, "계약완료"
+			, NOW()
+		)
+	</insert>
+	
+	<select id="getCount" parameterType="String" resultType="int">
+		SELECT con_no FROM contract_tbl WHERE staff_id = #{staff_id} ORDER BY con_no DESC limit 1
+	</select>
+	
+	<select id="getContractOne" parameterType="int" resultType="org.carnex.contract.vo.ContractVO">
+		SELECT * FROM contract_tbl WHERE con_no = #{con_no}
+	</select>
+	
+	<select id="getContractList" resultType="org.carnex.contract.vo.ContractVO">
+		SELECT * FROM contract_tbl ORDER BY con_reg_date DESC
+	</select>
+	
+	<delete id="deleteReserve">
+		DELETE FROM reservation_tbl WHERE car_num = #{car_num}
+	</delete>
+	
+	<select id="getUserCon" parameterType="String" resultType="org.carnex.contract.vo.ContractVO">
+		SELECT * FROM contract_tbl where user_id =#{user_id}
+	</select>
+	
+</mapper>

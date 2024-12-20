@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.container {width: 350px; margin: 50px auto;}
+
+/* =========== 어코디언 메뉴 =========== */
+input {display: none;}
+label {
+    position: relative;
+    height: 40px; padding-left: 20px;
+    font-size: 18px; color: #666; line-height: 40px; text-transform: uppercase;
+    background: linear-gradient(to bottom, #f6f6f6, #eaeaea); cursor: pointer;
+    border-radius: 0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease-in;
+}
+label::after{
+    content: '';
+    position: absolute; right: 20px; top: 16px;
+    width: 14px; height: 9px; background: url('../imgs/arrow_down.png') no-repeat;
+}
+label:hover {background: #f6f6f6;}
+
+input:checked + label {color: #f6f6f6; background:#0b4b65;}
+input:checked + label::after {background: url('../imgs/arrow_up.png') no-repeat;}
+
+
+
+/* =========== 어코디언 내용 =========== */
+.ac-content {
+    position: relative; height: 0; padding: 0;
+    background: #d5ebf5;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.4s ease-in;
+}
+
+input#ac-1:checked ~ .ac-content-1 {height: 290px; padding: 20px;}
+input#ac-2:checked ~ .ac-content-2 {height: 190px; padding: 20px;}
+
+
+/* .box {
+    display:block, none, flex; / justify-content:center, space-between; /align-items:center; / flex-wrap:wrap;(100%가 되면 줄바꿈)
+    position:relative, absolute, fixed; left,top,right,bottom
+    width / height / margin / padding
+    font-family / font-size / color / font-weight / text-align / line-height /text-decoration / text-transform / text-shadow
+    background / border / border-radius / box-shadow
+    opacity / z-index
+    transition / transform
+    animation
+} */

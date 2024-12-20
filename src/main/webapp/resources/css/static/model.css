@@ -1,0 +1,421 @@
+@charset "utf-8";
+
+/* ==========배너 이미지 지정========== */
+.bn {background:url('/resources/images/model/md-bn-bg.jpg') no-repeat center center; background-size:cover;}
+.sec {text-align:center; overflow:hidden;}
+
+/* ==========플렉스 슬라이이더 이미지========== */
+.flexslider {background:url('/resources/images/model/dcs-bg.png') no-repeat center center; background-size:cover;}
+.dcs-bg-1 {background:url('/resources/images/model/dcs-bg-1.png') no-repeat center center; background-size:cover;}
+.dcs-bg-2 {background:url('/resources/images/model/dcs-bg-2.png') no-repeat center center; background-size:cover;}
+.dcs-bg-3 {background:url('/resources/images/model/dcs-bg-3.png') no-repeat center center; background-size:cover;}
+.dcs-bg-4 {background:url('/resources/images/model/dcs-bg-4.png') no-repeat center center; background-size:cover;}
+
+/* ==========캐러셀 이미지========== */
+.item-bg-1 {background:url('/resources/images/model/sed-bg.jpg') no-repeat center center; background-size:cover;}
+.item-bg-2 {background:url('/resources/images/model/cou-bg.jpg') no-repeat center center; background-size:cover;}
+.item-bg-3 {background:url('/resources/images/model/sta-bg.jpg') no-repeat center center; background-size:cover;}
+.item-bg-4 {background:url('/resources/images/model/suv-bg.jpg') no-repeat center center; background-size:cover;}
+.item-bg-5 {background:url('/resources/images/model/con-bg.jpg') no-repeat center center; background-size:cover;}
+.item-bg-6 {background:url('/resources/images/model/hat-bg.jpg') no-repeat center center; background-size:cover;}
+.item-bg-7 {background:url('/resources/images/model/lim-bg.jpg') no-repeat center center; background-size:cover;}
+.item-bg-8 {background:url('/resources/images/model/van-bg.jpg') no-repeat center center; background-size:cover;}
+.item-bg-9 {background:url('/resources/images/model/pic-bg.jpg') no-repeat center center; background-size:cover;}
+
+/* ==========플렉스 슬라이이더 공통========== */
+.flexslider {border-radius:10px;}
+.slides li {position:relative;}
+.dcs-contents {position:absolute; left:0px; top:0px; width:100%; color:#f6f6f6;}
+.dcs-more {
+	position:relative;
+	color:#f6f6f6; text-transform:uppercase;
+	text-align:center; transition:all 0.4s ease-in;
+}
+.flex-prev > i {display:none;}
+.flex-next > i {display:none;}
+
+
+.flex-control-nav li {margin:0 10px;}
+.flex-control-nav li a { 
+	width:10px; height:10px; 
+	background:#767676;}
+.flex-control-paging li a.flex-active {background:#f6f6f6;}
+
+
+/* ==========캐러셀 공통========== */
+.owl-container {width:100%; height:100%;}
+.item {border-radius:10px; cursor:pointer;}
+.item-bg {background:no-repeat center center; border-radius:10px;}
+.owl-prev,
+.owl-next,
+.owl-dots {position:absolute;}
+.owl-dots {bottom:-15%; width:100%;}
+.item h4 {
+	font-family:"courgette"; font-weight:400px; text-shadow:1px 1px 1px #000;
+}
+
+
+@media screen and (min-width:1400px) {
+
+	/* ==========플렉스 슬라이이더========== */
+	.flexslider {margin:60px 0 0;}
+	.dcs-bg {height:600px;}
+
+	/* ==========플렉스 슬라이이더 텍스트========== */
+	.dcs-contents {padding:50px; text-align:left;}
+	.dcs-contents>h4 {padding-bottom:30px;}
+	.dcs-contents>p:nth-child(3) {padding-top:5px;}
+
+	/* ============ 플렉스 슬라이더 more ============ */
+	.dcs-more {
+		width:125px; margin-top:330px; font-size:24px; font-style:bold;
+	}
+
+	.dcs-more:focus,
+	.dcs-more:hover {color:#68ade2;}
+
+	.dcs-more:after {
+		content:"";
+		position:absolute; bottom:-2px; left:50%;
+		width:0%; height:2px; background:#f6f6f6;
+		transition:all 0.4s;
+	}
+
+	.dcs-more:focus:after,
+	.dcs-more:hover:after {
+		left:0%; width:100%; background:#68ade2;
+	}
+
+	/* =========== 플렉스 슬라이더 prev+next button ===========*/
+	.flex-prev {
+		left:100px !important;
+		background:url('/resources/images/model/dcs-prev.png') no-repeat center center;
+	}
+
+	.flex-next {
+		right:100px !important;
+		background:url('/resources/images/model/dcs-next.png') no-repeat center center;
+	}
+
+	/* ============ 플렉스 슬라이더 control ============ */
+	.flex-control-nav {left:50px; bottom:50px; text-align:left;}
+
+	/* ==========캐러셀========== */
+	.owl-container {margin:60px auto;}
+	.item-bg {height:400px;}
+	.item h4 {font-size:34px;}
+
+	/* ==========캐러셀 prev+next button ========== */
+	.owl-prev, .owl-next {z-index:10;}
+
+	.owl-prev {
+		left:5px; bottom:-20%; opacity:0;
+		transition:all ease-in 0.4s;
+	}
+
+	.owl-next {
+		right:5px; bottom:-20%; opacity:0;
+		transition:all ease-in 0.4s;}
+
+	.owl-prev i, .owl-next i {font-size:40px;}
+
+	.owl-carousel:hover .owl-prev,
+	.owl-carousel:hover .owl-next {opacity:1;}
+}
+
+@media screen and (min-width:1050px) and (max-width:1399px) {
+
+	/* ==========플렉스 슬라이이더========== */
+	.flexslider {margin:60px 0 0;}
+	.dcs-bg {height:550px;}
+
+	/* ==========플렉스 슬라이이더 텍스트========== */
+	.dcs-contents {padding:40px; text-align:left;}
+	.dcs-contents h4 {padding-bottom:30px;}
+	.dcs-contents>p:nth-child(3) {padding-top:5px;}
+
+	/* ============ 플렉스 슬라이더 more ============ */
+	.dcs-more {
+		width:100px; margin-top:310px; font-size:24px; font-style:bold;
+}
+	.dcs-more:focus,
+	.dcs-more:hover {color:#68ade2;}
+	.dcs-more:after {
+		content:"";
+		position:absolute; bottom:-2px; left:50%;
+		width:0%; height:2px; background:#f6f6f6;
+		transition:all 0.4s;
+	}
+	.dcs-more:focus:after,
+	.dcs-more:hover:after {
+		left:0%; width:100%; background:#68ade2;
+	}
+
+	/* =========== 플렉스 슬라이더 prev+next button ===========*/
+	.flex-prev {
+		left:30px !important;
+		background:url('/resources/images/model/dcs-prev.png') no-repeat center center;
+	}
+
+	.flex-next {
+		right:30px !important;
+		background:url('/resources/images/model/dcs-next.png') no-repeat center center;
+	}
+
+	/* ============ 플렉스 슬라이더 control ============ */
+	.flex-control-nav {left:30px; bottom:30px; text-align:left;}
+
+	/* ==========캐러셀========== */
+	.owl-container {margin:60px auto;}
+	.item-bg {height:320px;}
+	.item h4 {font-size:32px;}
+
+	/* ==========캐러셀 prev+next button ========== */
+	.owl-prev,
+	.owl-next {z-index:10;}
+	.owl-prev {
+		left:5px; bottom:-20%; opacity:0;
+		transition:all ease-in 0.4s;
+	}
+	.owl-next {
+		right:5px; bottom:-20%; opacity:0;
+		transition:all ease-in 0.4s;
+	}
+	.owl-prev i,
+	.owl-next i {font-size:40px;}
+	.owl-carousel:hover .owl-prev,
+	.owl-carousel:hover .owl-next {opacity:1;}
+}
+
+@media screen and (min-width:760px) and (max-width:1049px) {
+	/* ==========플렉스 슬라이이더========== */
+	.flexslider {width:100%; margin:50px 0 0;}
+	.slides li {height:478px;}
+	.dcs-bg {margin-top:45px; height:380px;}
+
+	/* ==========플렉스 슬라이이더 텍스트========== */
+	.dcs-contents h4 {padding:20px 0 10px;}
+	.dcs-contents p {width:320px; margin:0 auto;}
+	.dcs-contents>p:nth-child(3) {padding-top:3px;}
+
+	/* ============ 플렉스 슬라이더 more ============ */
+	.dcs-more {
+		width:120px; height:40px; margin:275px auto 0;
+		font-size:14px; line-height:37px;
+		border:2px solid#f6f6f6; border-radius:20px;
+		overflow:hidden;
+	}
+
+	.dcs-more:before,
+	.dcs-more:after {
+		content:"";
+		position:absolute; top:50%; width:20px; height:20px;
+		background:#f6f6f6; border-radius:50%;
+		z-index:-1;
+	}
+
+	.dcs-more:before {
+		left:-20px; transform:translate(-50%, -50%);
+	}
+
+	.dcs-more:after {
+		right:-20px; transform:translate(50%, -50%);
+	}
+
+	.dcs-more:hover {
+		color:#333; font-weight:800;
+	}
+
+	.dcs-more:hover:before {
+		animation:criss-cross-left 0.8s both;
+		animation-direction:alternate;
+	}
+
+	.dcs-more:hover:after {
+		animation:criss-cross-right 0.8s both;
+		animation-direction:alternate;
+	}
+
+	@keyframes criss-cross-left {
+		0% {left:-20px;}
+		50% {left:50%; width:20px; height:20px;}
+		100% {left:50%; width:375px; height:375px;}
+	}
+
+	@keyframes criss-cross-right {
+		0% {right:-20px;}
+		50% {right:50%; width:20px; height:20px;}
+		100% {right:50%; width:375px; height:375px;}
+	}
+
+	/* ============ 플렉스 슬라이더 prev+next button, control ============ */
+	.flex-direction-nav a {
+		top:0; width:200px; height:100%; margin:0;
+	}
+	.flex-direction-nav .flex-prev {left:0;}
+	.flex-direction-nav .flex-next {right:0;}
+	.flex-control-nav {left:0; bottom:14px;}
+
+	/* ==========캐러셀========== */
+	.owl-container {margin:50px auto;}
+	.item-bg {height:300px;}
+	.item h4 {font-size:32px;}
+
+	/* ==========캐러셀 prev+next button ========== */
+	.owl-prev,
+	.owl-next {z-index:10;}
+
+	.owl-prev {
+		left:5px; bottom:-20%;
+		transition:all ease-in 0.4s;
+	}
+
+	.owl-next {right:5px; bottom:-20%; transition:all ease-in 0.4s;}
+	.owl-prev i,
+	.owl-next i {font-size:40px;}
+}
+
+@media screen and (max-width:759px) {
+	h3 {width:300px; margin:0 auto;}
+
+	/* ==========플렉스 슬라이이더========== */
+	.flexslider {width:350px; margin:40px auto 0;}
+	.slides li {height:420px}
+	.dcs-bg {margin-top:110px; height:210px;}
+
+	/* ==========플렉스 슬라이이더 텍스트========== */
+	.dcs-contents h4 {padding-top:40px;}
+	.dcs-contents p {width:300px; margin:0 auto; text-align:center;}
+	.dcs-contents>p:nth-child(2) {padding-top:15px;}
+	.dcs-contents>p:nth-child(3) {padding-top:3px;}
+
+	/* ============ 플렉스 슬라이더 more ============ */
+	.dcs-more {
+		width:120px; height:40px; margin:190px auto 0; line-height:38px;
+		border:2px solid #f6f6f6; border-radius:20px; overflow:hidden;
+	}
+	.dcs-more:before,
+	.dcs-more:after {
+		content:"";
+		position:absolute; top:50%; width:20px; height:20px;
+		background:#f6f6f6; border-radius:50%;
+		z-index:-1;
+	}
+	.dcs-more:before {left:-20px; transform:translate(-50%, -50%);}
+	.dcs-more:after {right:-20px; transform:translate(50%, -50%);}
+	.dcs-more:hover {color:#333; font-weight:800;}
+	.dcs-more:hover:before {
+		animation:criss-cross-left 0.8s both;
+		animation-direction:alternate;
+	}
+	.dcs-more:hover:after {
+		animation:criss-cross-right 0.8s both;
+		animation-direction:alternate;
+	}
+	
+	@keyframes criss-cross-left {
+		0% {left:-20px;}
+		50% {left:50%; width:20px; height:20px;}
+		100% {left:50%; width:375px; height:375px;}
+	}
+
+	@keyframes criss-cross-right {
+		0% {right:-20px;}
+		50% {right:50%; width:20px; height:20px;}
+		100% {right:50%; width:375px; height:375px;}
+	}
+
+	/* ============ 플렉스 슬라이더 prev+next button, control ============ */
+	.flex-control-nav {left:0; bottom:9px;}
+
+	.flex-direction-nav a {
+		top:0; width:100px; height:100%; margin:0;
+	}
+
+	.flex-direction-nav .flex-prev {left:0;}
+	.flex-direction-nav .flex-next {right:0;}
+
+	/* ==========캐러셀========== */
+	.owl-container {margin:40px auto;}
+	.item-bg {height:300px;}
+	.item h4 {font-size:32px;}
+
+	/* ==========캐러셀 prev+next button ========== */
+	.owl-carousel {width:350px; margin:0 auto;}
+	.owl-prev,
+	.owl-next {display:none;}
+	.owl-prev i,
+	.owl-next i {display:none;}
+}
+
+/* ============ owlcarousel hover effect 공통 =========== */
+.container {transform-style:preserve-3d;}
+
+.front,
+.back {
+	height:300px;
+	color:#fff; text-align:center;
+	border-radius:10px;
+	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.25);
+	backface-visibility:hidden;
+	transition:transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back {
+	background:#cedce7;
+	background:url('/resources/images/model/dcs-bg.png') no-repeat center center;
+}
+.container:hover .front,
+.container:hover .back {
+	transition:transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.back {
+	position:absolute; top:0; left:0; width:100%;
+}
+
+.back>.inner>p {
+	padding-bottom:55px; text-shadow:1px 1px #111
+}
+
+.inner {
+	position:absolute; top:50%; left:0; width:100%; 
+	transform:translateY(-50%) translateZ(60px) scale(0.94);
+}
+
+.inner>a {
+	position:absolute; left:50%; width:100px; height:50px;
+	padding-top:15px;
+	color:#f6f6f6;
+	background:#fff; box-shadow:0 0 0 25px #111 inset;
+	opacity:0; transform:translateX(-50%);
+	transition:all 0.2s ease-in 0.6s,
+		box-shadow 0.3s ease-in,
+		color 0.3s ease-in;
+}
+
+.container .back {
+	transform:rotateY(180deg); transform-style:preserve-3d;
+}
+
+.container .front {
+	transform:rotateY(0deg); transform-style:preserve-3d;
+}
+
+.container:hover .back {
+	transform:rotateY(0deg); transform-style:preserve-3d;
+	animation:back-ani 1.3s both; animation-direction:alternate;
+}
+
+.container:hover .front {
+	transform:rotateY(-180deg); transform-style:preserve-3d;
+}
+
+.container:hover .inner>h4 {opacity:0;}
+.container:hover .inner>a {opacity:1;}
+.inner>a:hover {color:#111; box-shadow:0 0 0 2px #111 inset;}
+
+@keyframes back-ani {
+	0% {box-shadow:0 0 0 2px rgba(55, 80, 110, 0.3) inset;}
+	75% {box-shadow:0 0 0 2px rgba(55, 80, 110, 0.5) inset;}
+	100% {box-shadow:0 0 0 150px rgba(55, 80, 110, 0.7) inset;}
+}

@@ -1,0 +1,479 @@
+@charset "utf-8";
+
+/* ========== 배너 이미지 지정 ========== */
+.bn {background:url('/resources/images/pay/bn-pay-bg.jpg') no-repeat center center; background-size:cover;}
+
+/* ========================contents1영역========================== */
+.pay-install-wrap {
+    display:flex; justify-content:space-between; align-items:center;
+    color:#222; border-radius:10px;
+}
+.pay-install-txt {background:#eee;}
+.pay-install-txt > h4 {color:#222;}
+.pay-install-bg {background:url('/resources/images/pay/pay-install-bg.jpg') no-repeat center center;background-size:cover;}
+.pay {
+    position:relative; 
+    background:#f6f6f6; 
+    border-radius:50%; opacity:0;
+}
+.pay:hover > .pay-hover {transform:translate(-50%, -50%) scale(1.07);}
+.pay:hover:before {top:-8px; right:-8px; bottom:-8px; left:-8px; opacity:1;}
+.pay:before {left:-16px; right:-16px; top:-16px; bottom:-16px;}
+.pay:before {
+    content:"";
+    position:absolute;
+    border:#f6f6f6 solid 4px; border-radius:50%; opacity:0;
+    transition-duration:0.3s; transition-property:top right bottom left;
+}
+.pay-icon01 {transition:all 0.6s ease-in;}
+.pay-icon02 {transition:all 0.6s ease-in 0.4s;}
+.pay-icon03 {transition:all 0.6s ease-in 0.8s;}
+.pay-icon04 {transition:all 0.6s ease-in 1.2s;}
+.pay-icon05 {transition:all 0.6s ease-in 1.6s;}
+.pay-icon06 {transition:all 0.6s ease-in 2.0s;}
+.pay.fade-in {opacity:1;}
+.pay-hover {position:absolute; border-radius:50%;}
+.ico1 {background:url('/resources/images/pay/ico-01.png') no-repeat center center; background-size:50%; transition: all 0.3s ease-in;}
+.ico2 {background:url('/resources/images/pay/ico-02.png') no-repeat center center; background-size:50%;  transition: all 0.3s ease-in;}
+.ico3 {background:url('/resources/images/pay/ico-03.png') no-repeat center center; background-size:50%;  transition: all 0.3s ease-in;}
+.ico4 {background:url('/resources/images/pay/ico-04.png') no-repeat center center; background-size:50%;  transition: all 0.3s ease-in;}
+.ico5 {background:url('/resources/images/pay/ico-05.png') no-repeat center center; background-size:50%;  transition: all 0.3s ease-in;}
+.ico6 {background:url('/resources/images/pay/ico-06.png') no-repeat center center; background-size:50%;  transition: all 0.3s ease-in;}
+
+
+/* =======================contents2영역======================== */
+.pay-coc-wrap {color:#222; border-radius:10px;}
+.pay-coc-slide {background:url('/resources/images/pay/coc-bg.jpg') no-repeat center center; background-size:cover;}
+.owl-container {overflow:hidden;}
+.owl-prev, .owl-next, .owl-dots {position:absolute;}
+.item-bg {position: absolute; border-radius:10px;}
+.item-bg-1 {background:url('/resources/images/pay/coc-cd-01.jpg') no-repeat center center; background-size:cover;}
+.item-bg-2 {background:url('/resources/images/pay/coc-cd-02.jpg') no-repeat center center; background-size:cover;} 
+.item-bg-3 {background:url('/resources/images/pay/coc-cd-03.png') no-repeat center center; background-size:cover;} 
+.item-bg-4 {background:url('/resources/images/pay/coc-cd-04.png') no-repeat center center; background-size:cover;} 
+.pay-coc-item {background:#eee;}
+.pay-coc-item > h4 {color:#222;}
+
+
+/*======버튼======*/
+.btn {
+    position:relative; 
+    color:#333; text-align:center;
+    border:solid 2px #333; border-radius:40px;
+    overflow:hidden; z-index:1; opacity:0; cursor:pointer;
+    transition:1.2s ease-in-out; opacity:0; 
+}
+.btn:before, .btn:after {
+    position:absolute; top:50%; width:20px; height:20px;
+    content:"";
+    background-color:#333;
+    border-radius:50%;
+    z-index:-1;
+}
+.btn:before {left:-20px; transform:translate(-50%, -50%);}
+.btn:after {right:-20px; transform:translate(50%, -50%);}
+.btn:hover {color:#f6f6f6;}
+.btn:hover:before {
+    animation:criss-cross-left 0.8s both;
+    animation-direction:alternate;
+}
+.btn:hover:after {
+    animation:criss-cross-right 0.8s both;
+    animation-direction:alternate;
+}
+@keyframes criss-cross-left {
+    0% {left:-20px;}
+    50% {left:50%; width:20px; height:20px;}
+    100% {left:50%; width:375px; height:375px;}
+}
+@keyframes criss-cross-right {
+    0% {right:-20px;}
+    50% {right:50%; width:20px; height:20px;}
+    100% {right:50%; width:375px; height:375px;}
+}
+.btn.fade-in {opacity:1;}
+
+
+/* ========================(FHD)========================== */
+@media screen and (min-width:1400px) {
+    /*======content1======*/
+    .pay-install-wrap {height:600px; margin-top:60px; overflow:hidden; }
+    .pay-install-txt {width:400px; height:100%; padding-left:70px;}
+    .pay-install-txt > h4 {
+        width:210px; margin:135px 0 0 -50px;
+        line-height:40px; 
+        transition:all 0.4s ease-in; opacity:0;
+    }
+    .pay-install-txt > h4.fade-in {margin-left:0; opacity:1;}
+    .pay-install-txt > p {
+        width:260px; margin-left:-50px; padding-top:40px; 
+        line-height:30px; 
+        transition:all 0.4s ease-in; opacity:0
+        ;}
+    .pay-install-txt > p.fade-in {margin-left:0; opacity:1;}
+    .pay-install-bg {width:900px; height:600px;}
+    .pay-wrap {
+        display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;
+        width:715px; height:85%; margin:45px auto;
+    }
+	.pay {width:180px; height:180px;}
+    .pay-hover {top:44%; left:50%; width:180px; height:180px; transform:translate(-50%, -50%);}
+    .ico1 {margin-top:-10px;}
+    .ico2 {margin:-10px 2px;}
+    .ico3 {margin:-11px 1px;}
+    .ico4 {margin:-7px 3px;}
+    .ico5 {margin: -12px 1px;}      
+    .ico6 {margin: -10px 5px;}
+    .step {margin-top:135px;}
+    .step a {
+        display:block; position:relative; 
+        font-weight:600; color:#222; text-align:center;
+        cursor:default; overflow:hidden;
+    }
+    .step a span {display:block; transition:all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    .step a:after {
+        display:inline; position:absolute; top:100%; left:0; right:0;
+        text-align:center; transition:top 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        content:attr(data-hover);
+    }
+    .pay:hover .step a span {transform:translateY(-100%);}
+    .pay:hover .step a:after {top:0;}
+
+
+    /*======content2======*/
+    .pay-coc-wrap {
+        display:flex; justify-content:space-between; align-items:center;
+        height:560px; margin-top:60px; overflow:hidden;
+    }
+    .pay-coc-slide {width:900px; height:100%; padding:130px 0 0 50px;}
+    .owl-container {width:800px; height:300px;}
+    .owl-prev {left:-5px; top:30%;}
+    .owl-next  {right:-5px; top:30%;}
+    .owl-prev span, .owl-next span {font-size:70px; color:#f6f6f6;}
+    .owl-dots {bottom:0; width:100%;}
+    .item {width:400px; height:240px; margin:25px auto;}
+    .item-bg {left:50%; width:330px; height:215px; transform: translateX(-50%);}
+    .pay-coc-item {width:400px; height:100%; padding-left:90px;}
+    .pay-coc-item > h4 {margin:100px 0 0 -50px; transition:all 0.4s ease-in; opacity:0;}
+    .pay-coc-item > h4.fade-in {width:250px; margin:100px 0 0; opacity:1;}
+    .pay-coc-txt {margin:40px 0 0 -50px; line-height:40px; transition:all 0.4s ease-in 0.3s; opacity:0;}
+    .pay-coc-txt.fade-in {margin-left:0; opacity:1; }
+
+
+    /*======버튼======*/
+    .btn {width:150px; height:50px; font-weight:600; line-height:45px;}
+    .ins-btn {margin:65px 0 0 -100px;}
+    .ins-btn.fade-in {margin:65px 0 0 50px;}
+    .coc-btn {margin:65px 0 0 -100px;}
+    .coc-btn.fade-in {margin:65px 0 0 40px;}
+}
+
+
+
+/* ========================(HD)========================== */
+@media screen and (min-width:1050px) and (max-width:1399px){
+    /*======content1======*/
+    .pay-install-wrap {height:500px; margin-top:70px; overflow:hidden;}
+    .pay-install-txt {width:300px; height:500px; padding-left:55px;}
+    .pay-install-txt > h4 {
+        width:210px; margin:100px 0 0 -50px; 
+        line-height:30px; 
+        transition:all 0.4s ease-in; opacity:0;
+    }
+    .pay-install-txt > h4.fade-in {margin-left:0; opacity:1;}
+    .pay-install-txt > p {
+        width:190px; margin-left:-50px; padding-top:25px;
+        line-height:25px;
+        transition:all 0.4s ease-in 0.2s; opacity:0;
+    }
+    .pay-install-txt > p.fade-in {margin-left:0; opacity:1;}
+    .pay-install-bg {width:700px; height:500px;}
+    .pay-wrap {
+        display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;
+        margin:25px auto; width:599px; height:90%;
+    }   
+    .pay {width:150px; height:150px;}
+    .pay-hover {
+        top:44%; left:50%; width:150px; height:150px; 
+        transform:translate(-50%, -50%);
+    }
+    .ico1 {margin-top:-7px;}
+    .ico2 {margin:-9px 1px;}
+    .ico3 {margin:-9px 0;}
+    .ico4 {margin:-5px 3px;}
+    .ico5 {margin: -10px 0;}
+    .ico6 {margin: -10px 5px;}
+    .step {margin-top:115px;}
+    .step a {
+        display:block; position:relative; 
+        font-weight:600; color:#222; text-align:center;
+        cursor:default; overflow:hidden;
+    }
+    .step a span {display:block; transition:all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    .step a:after {
+        display:inline; position:absolute; top:100%; left:0; right:0;
+        text-align:center; transition:top 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        content:attr(data-hover);
+    }
+    .pay:hover .step a span {transform:translateY(-100%);}
+    .pay:hover .step a:after {top:0;}
+
+
+
+    /*======content2======*/
+    .pay-coc-wrap {
+        display:flex; justify-content:space-between; align-items:center; 
+        height:500px; margin-top:60px; 
+        overflow:hidden;
+    }
+    .pay-coc-slide {width:65%; height:100%; padding:100px 0 0 40px;}
+    .owl-container {width:700px; height:300px;}
+    .owl-prev {left:85px; top:35%;}
+    .owl-next  {right:170px; top:35%;}
+    .owl-prev span, .owl-next span {font-size:60px; color:#f6f6f6;}
+    .owl-dots {left:60px; bottom:-20px; width:70%;}
+    .item {width:340px; height:220px; margin:30px auto;}
+    .item-bg {left:50%; width:330px; height:215px; transform: translateX(-63%);}
+    .pay-coc-item {width:35%; height:100%; padding-left:70px;}
+    .pay-coc-item > h4 {margin:100px 0 0 -50px; transition:all 0.4s ease-in; opacity:0;}
+    .pay-coc-item > h4.fade-in {width:250px; margin:100px 0 0 ; opacity:1;}
+    .pay-coc-txt {width:230px; margin:30px 0 0 -50px; line-height:35px; transition:all 0.4s ease-in 0.3s; opacity:0;}
+    .pay-coc-txt.fade-in {margin-left:0; opacity:1;}
+
+
+    /*======버튼======*/
+    .btn {width:135px; height:45px; font-weight:600; line-height:42px;}
+    .ins-btn {margin:60px 0 0 -40px;}
+    .ins-btn.fade-in {margin:60px 0 0 27px;}
+    .coc-btn {margin:45px 0 0 -30px;}
+    .coc-btn.fade-in {margin:45px 0 0 40px;}
+}
+
+
+
+/* ========================(태블릿)========================== */
+@media screen and (min-width:760px) and (max-width:1049px){
+    /*======content1======*/
+    .sub-txt {width:90%; margin:0 auto;}
+    br {display:none;} 
+    .pay-install-wrap {
+        position:relative; margin-top:50px; left:50%; top:0; height:800px;  
+        transform:translateX(-50%); overflow:hidden; 
+    }
+    .pay-install-txt {
+        position:absolute; left:0; top:450px; width:100%; height:250px; 
+        border-radius:0 0 10px 10px;
+    }
+    .pay-install-txt > h4 {
+        margin:55px 0 0 -50px; 
+        text-align:center; 
+        transition:all 0.4s ease-in; opacity:0;
+    }
+    .pay-install-txt > h4.fade-in {margin-left:0; opacity:1;}
+    .pay-install-txt > p {
+        margin:15px -100px; 
+        text-align:center; line-height:25px; 
+        transition:all 0.4s ease-in 0.2s; opacity:0;
+    }
+    .pay-install-txt > p.fade-in {width: 500px; margin:15px auto; opacity:1;}
+    .pay-install-bg {
+        position:absolute; left:0; top:0; width:100%; height:450px; overflow:hidden;
+        background:url('/resources/images/pay/pay-install-bg.jpg') no-repeat center center;
+    }
+    .pay {position:absolute; width:135px; height:135px;}
+    .pay-icon01 {left:10%; top:12%;}
+    .pay-icon02 {left:40%; top:12%;}
+    .pay-icon03 {right:10%; top:12%;}
+    .pay-icon04 {left:10%; top:55%;}
+    .pay-icon05 {left:40%; top:55%;}
+    .pay-icon06 {right:10%; top:55%;}
+    .pay-hover {
+        top:44%; left:50%; width:150px; height:150px; 
+        transform:translate(-50%, -50%); 
+    }
+    .ico1 {margin-top:-9px;}
+    .ico2 {margin:-9px 1px;}
+    .ico3 {margin:-9px 2px;}
+    .ico4 {margin:-5px 1px;}
+    .ico5 {margin: -10px 0;}
+    .ico6 {margin: -10px 5px;}
+    .step {margin-top:100px;}
+    .step a {
+        display:block; position:relative; 
+        font-weight:600; color:#222; text-align:center;
+        cursor:default; overflow:hidden;
+    }
+    .step a span {display:block; transition:all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    .step a:after {
+        display:inline; position:absolute; top:100%; left:0; right:0;
+        text-align:center; transition:top 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        content:attr(data-hover);
+    }
+    .pay:hover .step a span {transform:translateY(-100%);}
+    .pay:hover .step a:after {top:0;}
+
+
+    /*======content2======*/
+    .pay-coc-wrap {
+        position:relative; left:0; top:0; height:850px; margin-top:50px;
+        overflow:hidden; 
+    }
+    .pay-coc-slide {
+        position:absolute; left:50%; top:0; width:100%; height:450px; padding:20px 0 0 0;
+        transform:translateX(-50%); 
+    }
+    .owl-container {width:100%; height:450px;}
+    .owl-prev {left:24%; top:33%;}
+    .owl-next  {right: 24%; top:33%;}
+    .owl-prev span, .owl-next span {font-size:80px; color:#f6f6f6;}
+    .owl-dots {left:37%; bottom:20%;}
+    .item {width:450px; height:400px; margin: 30px 0 20px 0;}
+    .item-bg {left:50%; top:25%; width:280px; height:185px; transform: translateX(-50%);}
+    .pay-coc-item {
+        position:absolute; left:50%; top:53%; width:100%; height:350px; background:#f6f6f6;
+        transform:translate(-50%);
+        border-radius:0 0 10px 10px;
+    }
+    .pay-coc-item > h4 {
+        width:100%; margin:70px 0 0 100px;
+        color:#333; text-align:center;
+        transition:all 0.4s ease-in 0.3s; opacity:0;
+    }
+    .pay-coc-item > h4.fade-in {width:250px; margin:70px 0 0 240px; opacity:1;}
+    .pay-coc-txt {
+        margin:20px auto -50px; width:100%;
+        color:#333; text-align:center; line-height:30px;
+        transition:all 0.4s ease-in 0.6s; opacity:0;
+    }
+    .pay-coc-txt {margin-left:20px;}
+    .pay-coc-txt > p {margin:0 auto;}
+    .pay-coc-txt.fade-in {margin-left:0px; opacity:1;}
+
+
+    /*======버튼======*/
+    .btn {width:150px; height:50px; font-weight:600; line-height:45px;}
+    .ins-btn {margin:20px 200px 0;}
+    .ins-btn.fade-in {margin:20px 290px 0;}
+    .coc-btn {margin:75px 0 30px 330px;}
+    .coc-btn.fade-in {margin:75px 0 30px 290px;}
+    .coc-btn {color:#333; border:solid 2px #333;}
+    .coc-btn:before, .coc-btn:after {background-color:#333;}
+    .coc-btn:hover {color:#f6f6f6;}
+}
+
+
+
+
+/* ========================(스마트폰)========================== */
+@media screen and (max-width:759px){
+    /*======content1======*/
+    .sub-txt {width:220px; margin:0 auto;}
+    br {display:none;}  
+    .pay-install-wrap {
+        position:relative; left:50%; width:350px; height:750px; margin-top:50px; 
+        transform:translateX(-50%); overflow:hidden;
+    }
+    .pay-install-txt {
+        position:absolute; left:0; top:500px; width:100%; height:270px; 
+        display:flex; justify-content:center; flex-wrap:wrap;
+    }
+    .pay-install-txt > h4 {
+        margin:35px 0 0 -50px; width:100%;
+        text-align:center; transition:all 0.4s ease-in; opacity:0;
+    }
+    .pay-install-txt > h4.fade-in {margin-left:0; opacity:1;}
+    .pay-install-txt > p {
+        padding:10px 0;  width:300px;   
+        text-align:center; line-height:25px; transition:all 0.4s ease-in 0.2s; opacity:0;
+    }
+    .pay-install-txt > p.fade-in {margin-left:0; opacity:1;}
+    
+
+    .pay-install-bg {
+        position:absolute; left:0; top:0; width:350px; height:500px; overflow:hidden;
+        background:url('/resources/images/pay/pay-install-bg.jpg') no-repeat center center;
+    }
+    .pay {position:absolute; width:100px; height:100px;}
+    .pay-icon01 {left:13.5%; top:8%;}
+    .pay-icon02 {right:13.5%; top:8%;}
+    .pay-icon03 {left:13.5%; top:39%;}
+    .pay-icon04 {right:13.5%; top:39%;}
+    .pay-icon05 {left:13.5%; bottom:8%;}
+    .pay-icon06 {right:13.5%; bottom:8%;}
+    .pay-hover {top:44%; left:50%; transform:translate(-50%, -50%); width:100px; height:100px; align-items: center;}
+    .ico1 {margin-top:-9px;}
+    .ico2 {margin:-9px 1px;}
+    .ico3 {margin:-9px 0;}
+    .ico4 {margin:-5px 1px;}
+    .ico5 {margin: -10px 0;}
+    .ico6 {margin: -10px 5px;}
+    .step {margin-top:65px;}
+    .step a {
+        display:block; position:relative; 
+        font-weight:600; color:#222; text-align:center;
+        cursor:default; overflow:hidden;
+    }
+    .step a span {display:block; transition:all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    .step a:after {
+        display:inline; position:absolute; top:100%; left:0; right:0;
+        text-align:center; transition:top 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        content:attr(data-hover);
+    }
+    .pay:hover .step a span {transform:translateY(-100%);}
+    .pay:hover .step a:after {top:0;}
+    
+
+    /*======content2======*/
+    .pay-coc-wrap {
+        position:relative; left:0; top:0; height:550px; margin-top:50px; 
+        overflow:hidden;
+    }
+    .pay-coc-slide {
+        position:absolute; left:50%; top:0; padding:20px 0 0 0; 
+        background:none;
+        transform:translateX(-50%);
+    }
+    .owl-container {width:400px;}
+    .owl-prev {left:5%; top:30%;}
+    .owl-next  {right:5%; top:30%;}
+    .owl-prev span, .owl-next span {font-size:60px; color:#f6f6f6;}
+    .owl-dots {left:25%; bottom:0;}
+    .owl-container::after {
+        content:""; 
+        position: absolute; left:20%; top:5%;
+        width:60%; height:77%; z-index:-1;
+        background:#ecd75d; border-radius:50%;
+    }
+    .item {width:300px; height:220px; margin: 30px 0 20px 0;}
+    .item-bg {margin:-10px 0; left:50%; width:280px; height:185px; transform: translateX(-50%);}
+    .pay-coc-item {
+        position:absolute; left:50%; top:60%; 
+        width:100%; background:none; 
+        transform:translate(-50%);
+    }
+    .pay-coc-item > h4 {
+        width:100%; 
+        color:#f6f6f6; text-align:center; 
+        transition:all 0.4s ease-in;  opacity:0;
+    }
+    .pay-coc-item > h4.fade-in {width:250px; margin:0 auto; opacity:1;}
+    .pay-coc-txt {
+        margin:10px auto; margin-left:60px; width:100%; 
+        color:#f6f6f6; text-align:center; line-height:30px; 
+        transition:all 0.4s ease-in 0.3s; opacity:0;
+    }
+    .pay-coc-txt.fade-in {margin-left:0; opacity:1;}
+    .pay-coc-txt > p {margin:0 auto;}
+
+
+    /*======버튼======*/
+    .btn {width:130px; height:45px; font-weight:600; line-height:42px;}
+    .ins-btn {margin:0 60px 35px 30px;}
+    .ins-btn.fade-in {margin:0 40px 35px 30px;}
+    .coc-btn {margin:20px 100px;} 
+    .coc-btn.fade-in {margin:20px auto;}
+
+    .coc-btn {color:#f6f6f6; border:solid 2px #f6f6f6;}
+    .coc-btn:before, .coc-btn:after {background-color:#f6f6f6;}
+    .coc-btn:hover {color:#333;}
+}   

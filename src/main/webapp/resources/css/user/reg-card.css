@@ -1,0 +1,224 @@
+@charset "utf-8";
+body {
+  background: url('/resources/images/index/fp-bg1.jpg') no-repeat center center;
+  background-size: cover;
+  width: 100%; 
+}
+
+
+@media screen and (min-width:1400px) {
+  h4 {
+    justify-content:center; text-align:center;
+  }
+  
+  /* =========== 카드 정보 입력폼 ========== */
+  .pm-card-info {
+    width: 50%; margin:200px auto 0; padding: 40px;
+  	border: 2px solid rgba(255,255,255,0.5);
+  	border-radius: 20px;
+  	backdrop-filter: blur(10px);
+  	transform-style: preserve-3d;
+  	backface-visibility: hidden;
+  }
+  .pm-card-info > p {margin:0 0 5px; font-size:18px; font-weight: 600;}
+  .pm-bank-btn-wrap {
+    display:flex; justify-content: space-between; flex-wrap: wrap; padding-bottom: 20px;
+    border-top:1px solid #bbb; border-bottom:1px solid #bbb;
+  }
+
+  input[type="radio"] {display:none;}
+  input[type="radio"]:checked + label {background: #68ade2; color: #f6f6f6;}
+  
+  
+  .form-style {padding-left: 15px;}
+
+  .btn {  
+    display: inline-flex; justify-content: center; align-items: center;
+    margin-top: 20px; padding: 0 30px; height: 44px;
+    text-align: center; letter-spacing: 1px; text-transform: uppercase;
+    border: none; border-radius: 4px;
+    box-shadow: 0 8px 24px 0 rgba(255,235,167,0.1);
+    cursor: pointer;
+    transition: all 200ms linear;
+  }
+  .btn-carnex {margin-top: 35px; width:78%;}
+  .btn-check {
+    width:146px; height:46px;
+    color: #181600; background: #ffeba7;
+    cursor: pointer;
+  }
+  .btn:hover{  
+    background: #68ade2;
+    color: #f6f6f6;
+    box-shadow: 0 8px 24px 0 rgba(16,39,112,0.1);
+  }
+  .pm-card-info-ul p {margin:7px 0 0;}
+  .pm-name{width: 280px;}
+  .digit {width: 23%}
+  .exp-date, .cvc {width:85%;}
+} 
+
+
+
+@media screen and (min-width:1050px) and (max-width:1399px) {
+  h4 {justify-content:center; text-align:center;}
+  
+  /* =========== 카드 정보 입력폼 ========== */
+  .pm-card-info {
+    width: 50%; margin:200px auto 0; padding: 40px;
+  	border: 2px solid rgba(255,255,255,0.5);
+  	border-radius: 20px;
+  	backdrop-filter: blur(10px);
+  	transform-style: preserve-3d;
+  	backface-visibility: hidden;
+  }
+  .pm-card-info > p {margin:0 0 5px; font-size:18px; font-weight: 600;}
+  .pm-bank-btn-wrap {
+    display:flex; justify-content: space-between; flex-wrap: wrap; padding-bottom: 20px;
+    border-top:1px solid #bbb; border-bottom:1px solid #bbb;
+  }
+
+  input[type="radio"] {display:none;}
+  input[type="radio"]:checked + label {background: #68ade2; color: #f6f6f6;}
+  
+  
+  .form-style {padding-left: 15px;}
+
+  .btn {  
+    display: inline-flex; justify-content: center; align-items: center;
+    margin-top: 20px; padding: 0 30px; height: 44px;
+    text-align: center; letter-spacing: 1px; text-transform: uppercase;
+    border: none; border-radius: 4px;
+    box-shadow: 0 8px 24px 0 rgba(255,235,167,0.1);
+    cursor: pointer;
+    transition: all 200ms linear;
+  }
+  .btn-carnex {margin-top: 25px; width:78%;}
+  .btn-check {
+    width:200px; height:46px;
+    color: #181600; background: #ffeba7;
+    cursor: pointer;
+  }
+  .btn:hover{  
+    background: #68ade2;
+    color: #f6f6f6;
+    box-shadow: 0 8px 24px 0 rgba(16,39,112,0.1);
+  }
+  .pm-card-info-ul p {margin:7px 0 0;}
+  .pm-name{width: 202px;}
+  .digit {width: 23%}
+  .exp-date, .cvc {width:85%;}
+}
+
+
+
+@media screen and (min-width:760px) and (max-width:1049px) {	
+  h4 {justify-content:center; text-align:center;}
+  
+  /* =========== 카드 정보 입력폼 ========== */
+  .pm-card-info {
+    width: 100%; margin:200px auto 0; padding: 40px;
+  	border: 2px solid rgba(255,255,255,0.5);
+  	border-radius: 20px;
+  	backdrop-filter: blur(10px);
+  	transform-style: preserve-3d;
+  	backface-visibility: hidden;
+  }
+  .pm-card-info > p {margin:0 0 5px; font-size:18px; font-weight: 600;}
+  .pm-bank-btn-wrap {
+    display:flex; justify-content: space-between; flex-wrap: wrap; padding-bottom: 20px;
+    border-top:1px solid #bbb; border-bottom:1px solid #bbb;
+  }
+
+  input[type="radio"] {display:none;}
+  input[type="radio"]:checked + label {background: #68ade2; color: #f6f6f6;}
+  
+  
+  .form-style {padding-left: 15px;}
+
+  .btn {  
+    display: inline-flex; justify-content: center; align-items: center;
+    margin-top: 20px; padding: 0 30px; height: 44px;
+    text-align: center; letter-spacing: 1px; text-transform: uppercase;
+    border: none; border-radius: 4px;
+    box-shadow: 0 8px 24px 0 rgba(255,235,167,0.1);
+    cursor: pointer;
+    transition: all 200ms linear;
+  }
+  .btn-carnex {margin-top: 25px; width:78%;}
+  .btn-check {
+    width:200px; height:46px;
+    color: #181600; background: #ffeba7;
+    cursor: pointer;
+  }
+  .btn:hover{  
+    background: #68ade2;
+    color: #f6f6f6;
+    box-shadow: 0 8px 24px 0 rgba(16,39,112,0.1);
+  }
+  .pm-card-info-ul p {margin:7px 0 0;}
+  .pm-name{width: 314px;}
+  .digit {width: 23%}
+  .exp-date, .cvc {width:85%;}
+}
+
+
+
+@media screen and (max-width:759px) {
+  h4 {justify-content:center; text-align:center; padding-bottom: 40px;}
+  
+  .pm-card-info {
+    width:95%; margin:100px auto 0; padding: 40px;
+  	border: 2px solid rgba(255,255,255,0.5);
+  	border-radius: 20px;
+  	backdrop-filter: blur(10px);
+  	transform-style: preserve-3d;
+  	backface-visibility: hidden;
+  }
+  .pm-card-info > p {margin:0 15px 5px; font-size:18px; font-weight: 600;}
+  .pm-bank-btn-wrap {
+    display:flex; justify-content: space-between; flex-wrap: wrap; 
+    width:100%; padding-bottom:10px; border-top:1px solid #bbb; border-bottom:1px solid #bbb;
+  }
+
+  input[type="radio"] {display:none;}
+  input[type="radio"]:checked + label {background: #68ade2; color: #f6f6f6;}
+  
+ 
+  .form-style {
+    margin-top: 10px; padding: 13px 20px; padding-left: 20px; height: 40px;
+	width: 100%;
+  }
+  .cvc-wrap {flex-wrap: wrap;}
+  .cvc-wrap > div {width: 48%;}
+  .cvc-wrap > div:first-child {margin-right: 10px;}
+
+  .btn {  
+    display: inline-flex; justify-content: center; align-items: center;
+    margin-top: 10px; padding: 0 15px; height: 40px;
+    text-align: center; letter-spacing: 1px; text-transform: uppercase;
+    border: none; border-radius: 4px;
+    box-shadow: 0 8px 24px 0 rgba(255,235,167,0.1);
+    cursor: pointer;
+    transition:all linear 0.2s;
+  }
+  .btn-carnex {color: #374BE6; background: #68ade2; margin-top: 20px; width: 100%;}
+  .btn-check {
+    width:120px; height:46px;
+    color: #181600; background: #ffeba7;
+    cursor: pointer;
+  }
+  .btn:hover{  
+    background: #68ade2;
+    color: #f6f6f6;
+    box-shadow: 0 8px 24px 0 rgba(16,39,112,0.1);
+  }
+  
+  .pm-card-info-ul p {margin:10px 0 0 10px;}
+  .pm-name-wrap {display:block;}
+  .pm-name {width:100%;}
+  .pm-digit-wrap {justify-content:space-between;}
+  .digit {width:24%;}
+
+  .pm-card-info-ul > li:nth-last-child() div {width:20%;}
+} 

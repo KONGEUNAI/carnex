@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.admin.mappers.staff">
+
+	<insert id="register" parameterType="org.carnex.admin.vo.StaffVO">
+		INSERT INTO staff_tbl (
+			staff_id
+			, staff_pwd
+			, staff_name
+			, staff_phone
+			, staff_part
+			, staff_type
+			, staff_img
+			, staff_reg_date
+		) VALUES (
+			#{staff_id}
+			, #{staff_pwd}
+			, #{staff_name}
+			, #{staff_phone}
+			, #{staff_part}
+			, #{staff_type}
+			, #{staff_img}
+			, now()
+		)
+	</insert>
+	
+	<select id ="getStaffOne" parameterType="String" resultType="org.carnex.admin.vo.StaffVO" >
+		SELECT * FROM staff_tbl WHERE staff_id = #{staff_id}
+	</select>
+	
+	<select id ="getStaffList" resultType="org.carnex.admin.vo.StaffVO" >
+		select * from staff_tbl
+	</select>
+	
+	<select id ="getStaffPartList" parameterType="int" resultType="org.carnex.admin.vo.StaffVO" > 
+		select * from staff_tbl WHERE staff_part = #{staff_part}
+	</select>
+	
+	<select id="getCount" resultType="int">
+		select count(*) from staff_tbl
+	</select>
+	
+	<select id="getPartCount" resultType="int">
+		select count(*) from staff_tbl WHERE staff_part = #{staff_part}
+	</select>
+	
+	<update id="modify" parameterType="org.carnex.admin.vo.StaffVO">
+		UPDATE staff_tbl SET
+			staff_pwd = #{staff_pwd}
+			, staff_name = #{staff_name}
+			, staff_phone = #{staff_phone}
+			, staff_part = #{staff_part}
+			, staff_type = #{staff_type}
+			, staff_img = #{staff_img}
+			, staff_intro = #{staff_intro}
+			, staff_up_date = now()
+		WHERE staff_id = #{staff_id}
+	</update>
+	
+	<update id="delete" parameterType="String">
+		UPDATE staff_tbl SET
+			staff_type = 0
+			, staff_up_date = now()
+			, staff_out_date = now()
+		WHERE staff_id = #{staff_id}
+	</update>
+</mapper>

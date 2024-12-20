@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.user.mappers.member">
+
+	<select id="address" parameterType="String" resultType="org.carnex.user.vo.AddressVO">
+		SELECT * FROM address_tbl WHERE area3 LIKE CONCAT('%',#{area3},'%')
+	</select>
+
+	<insert id="register" parameterType="org.carnex.user.vo.MemberVO">
+		INSERT INTO user_tbl (
+			user_id
+			, user_pwd
+			, user_name
+			, user_nick
+			, user_birth
+			, user_gender
+			, user_tel
+			, user_zipcode
+			, user_address
+			, user_reg_date
+		) VALUES (
+			#{user_id}
+			, #{user_pwd}
+			, #{user_name}
+			, #{user_nick}
+			, #{user_birth}
+			, #{user_gender}
+			, #{user_tel}
+			, #{user_zipcode}
+			, #{user_address}
+			, now()
+		)
+	</insert>
+	
+	<update id="insertop" parameterType="org.carnex.user.vo.MemberVO">
+		UPDATE user_tbl SET
+			user_mail = #{user_mail}
+			, user_wishcar = #{user_wishcar}
+			, user_wishprice = #{user_wishprice}
+			, user_path = #{user_path}
+			, user_img = #{user_img}
+			, user_intro = #{user_intro}
+		WHERE user_id = #{user_id}
+	</update>
+	
+	<select id ="mypage" parameterType="String" resultType="org.carnex.user.vo.MemberVO" >
+		SELECT * FROM user_tbl WHERE user_id = #{user_id}
+	</select>
+	
+	<select id="getDBPassword" parameterType="String" resultType="String">
+		SELECT user_pwd FROM user_tbl where user_id=#{user_id}
+	</select> 
+	
+	<select id ="getMyBoard" parameterType="String"  resultType="org.carnex.board.vo.BoardVO" >
+		SELECT * FROM board_tbl WHERE writer = #{user_nick}
+	</select>
+	
+	<select id ="memberlist" resultType="org.carnex.user.vo.MemberVO" >
+		select * from user_tbl WHERE user_type=1
+	</select>
+	
+	<select id="getCount" resultType="int">
+		select count(*) from user_tbl WHERE user_type=1
+	</select>
+	
+	<select id="getNgCount" resultType="int">
+		select count(*) from user_tbl WHERE user_type=0
+	</select>
+	
+	<select id ="nglist" resultType="org.carnex.user.vo.MemberVO" >
+		select * from user_tbl WHERE user_type=0
+	</select>
+	
+	<update id="modify" parameterType="org.carnex.user.vo.MemberVO">
+		UPDATE user_tbl SET
+			user_pwd = #{user_pwd}
+			, user_name = #{user_name}
+			, user_nick = #{user_nick}
+			, user_birth = #{user_birth}
+			, user_gender = #{user_gender}
+			, user_tel = #{user_tel}
+			, user_zipcode = #{user_zipcode}
+			, user_address = #{user_address}
+			, user_mail = #{user_mail}
+			, user_type = #{user_type}
+			, user_up_date = now()
+		WHERE user_id = #{user_id}
+	</update>
+	
+	<update id="userModify" parameterType="org.carnex.user.vo.MemberVO">
+		UPDATE user_tbl SET
+			user_pwd = #{user_pwd}
+			, user_name = #{user_name}
+			, user_nick = #{user_nick}
+			, user_birth = #{user_birth}
+			, user_gender = #{user_gender}
+			, user_tel = #{user_tel}
+			, user_zipcode = #{user_zipcode}
+			, user_address = #{user_address}
+			, user_mail = #{user_mail}
+			, user_wishcar = #{user_wishcar}
+			, user_wishprice = #{user_wishprice}
+			, user_path = #{user_path}
+			, user_img = #{user_img}
+			, user_intro = #{user_intro}
+			, user_up_date = now()
+		WHERE user_id = #{user_id}
+	</update>
+	
+	<update id="delete" parameterType="String">
+		UPDATE user_tbl SET
+			user_type = 0,
+			user_drop = #{user_drop}
+		WHERE user_id = #{user_id}
+	</update>
+	
+	<insert id="regCard" parameterType="org.carnex.user.vo.CardVO">
+	    INSERT INTO card_tbl (
+	        user_id,
+	        card_bank,
+	        card_lastname,
+	        card_firstname,
+	        card_expdate,
+	        card_cvc,
+	        card_digit1,
+	        card_digit2,
+	        card_digit3,
+	        card_digit4
+	    ) VALUES (
+	        #{user_id}, 
+	        #{card_bank}, 
+	        #{card_lastname}, 
+	        #{card_firstname}, 
+	        #{card_expdate}, 
+	        #{card_cvc}, 
+	        #{card_digit1}, 
+	        #{card_digit2}, 
+	        #{card_digit3}, 
+	        #{card_digit4} 
+	    );
+	</insert>
+	
+	<select id="cardList" parameterType="String" resultType="org.carnex.user.vo.CardVO">
+		SELECT * FROM card_tbl WHERE user_id=#{user_id}
+	</select>
+	
+	<delete id="cardDelete">
+		delete from card_tbl WHERE card_num=#{card_num}
+	</delete>
+	
+	<select id="getCard" resultType="org.carnex.user.vo.CardVO">
+		SELECT * FROM card_tbl WHERE card_num=#{card_num}
+	</select>
+	
+	<update id="cardModify" parameterType="org.carnex.user.vo.CardVO">
+		UPDATE card_tbl SET 
+	        card_bank=#{card_bank}
+	        , card_lastname=#{card_lastname}
+	        , card_firstname=#{card_firstname}
+	        , card_expdate=#{card_expdate}
+	        , card_cvc=#{card_cvc}
+	        , card_digit1=#{card_digit1}
+	        , card_digit2=#{card_digit2}
+	        , card_digit3=#{card_digit3}
+	        , card_digit4=#{card_digit4}
+		WHERE card_num=#{card_num};
+	</update>
+	
+	<select id="getMemberCount" resultType="int">
+		SELECT count(*) FROM user_tbl
+	</select>
+	
+	<select id="getUserWishCount" resultType="hashMap">
+		SELECT user_wishcar, COUNT(*) AS count FROM user_tbl GROUP BY user_wishcar;
+	</select>
+	
+	<select id="getUserWishPrice" resultType="hashMap">
+		SELECT user_wishprice, COUNT(*) AS count FROM user_tbl GROUP BY user_wishprice;
+	</select>
+	
+	<select id="getRevOne"  resultType="org.carnex.contract.vo.ReservationVO">
+		SELECT * FROM reservation_tbl where rev_no=#{rev_no}
+	</select>
+	
+	<update id="revModify" parameterType="org.carnex.contract.vo.ReservationVO">
+		UPDATE reservation_tbl SET 
+			rev_time=#{rev_time},
+	        rev_date=#{rev_date},
+	        rev_reg_date = now()
+		WHERE rev_no=#{rev_no} and user_id =#{user_id}
+	</update>
+	
+	<select id="getRevUser"  parameterType="String" resultType="org.carnex.contract.vo.ReservationVO">
+		SELECT * FROM reservation_tbl where user_id=#{user_id}
+	</select>
+
+	<delete id="deleteRev" parameterType="hashMap" >
+		delete from reservation_tbl WHERE user_id=#{user_id} and rev_no=#{rev_no}
+	</delete>
+	
+</mapper>

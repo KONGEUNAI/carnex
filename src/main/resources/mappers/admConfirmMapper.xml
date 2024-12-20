@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.admin.mappers.confirm">
+
+	<select id="login" resultType="org.carnex.user.vo.MemberVO">
+		select * from user_tbl
+		where user_id = #{user_id}
+	</select>
+	
+	<select id="stafflogin" resultType="org.carnex.admin.vo.StaffVO">
+		select * from staff_tbl
+		where staff_id = #{staff_id}
+	</select>
+	
+	<select id="idcheck" parameterType="String" resultType="org.carnex.user.vo.MemberVO">
+		SELECT * FROM user_tbl WHERE user_id = #{user_id}
+	</select>
+	
+	<select id="nickcheck" parameterType="String" resultType="int">
+		SELECT count(*) FROM user_tbl WHERE user_nick = #{user_nick} 
+	</select>
+	
+	<select id="staffidcheck" parameterType="String" resultType="org.carnex.admin.vo.StaffVO">
+		SELECT * FROM staff_tbl WHERE staff_id = #{staff_id}
+	</select>
+</mapper>

@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+.liteAccordion {text-align: left; font: 'Helvetica Neue', Verdana, Arial, sans-serif; -webkit-tap-highlight-color: transparent;}
+.liteAccordion > ol { position:relative; overflow:hidden; height:100%; margin:0; padding:0; list-style:none; }
+
+.liteAccordion .slide > h4 { /* 어코디언 버튼: 박스를 세로로 세움 > 박스의 기준점을 오른쪽 위로 설정한 후 박스를 왼쪽으로 자신의 너비값 만큼 이동하고, 시계 반대 방향으로 90도 회전하여 슬라이드 이미지 왼쪽 바로 옆에 위치 */
+    position: absolute; left: 0; top: 0; margin: 0;
+    font-size:20px; color:black; font-weight:normal;
+    backface-visibility:hidden;
+    transform:translateX(-100%) rotate(-90deg); z-index:100;
+    transform-origin:right top;
+}
+
+.liteAccordion .slide > h4 span {
+    display: block;
+    height:90%; margin-top:5px; padding-right:8%; 
+    text-align:right;
+    /* 웹 페이지에 코딩 되어진 글씨 영역에 마우스를 드래그하여 복사할 수 있다. 이를 막아주는 것이다. */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/*
+.liteAccordion .slide > h4 b { 
+    display:inline-block; 
+    position:absolute; left: 10%; top:13%;     
+    text-align:center; 
+    -webkit-transform:rotate(90deg); 
+    -moz-transform:rotate(90deg); 
+    -o-transform:rotate(90deg); 
+    transform:rotate(90deg);
+}
+*/
+.liteAccordion .slide > h4:hover { cursor:pointer }
+.liteAccordion .slide > div { 
+    position:absolute; top:0; height:100%; z-index:10; /* overflow: hidden; */
+    background:white;
+}
+.liteAccordion noscript p { margin:0; padding:10px; background:white }
+.liteAccordion.basic .slide > h4 { background:#C4C4C4; color:white; line-height:225% }
+
+
+
+
+
+
+.liteAccordion.dark {
+    padding: 5px 5px 5px 0;
+    background: #030303; border:5px solid #353535; border-bottom-width:5px;
+    box-shadow: 0 -1px 0 #5b5b5b inset, 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.liteAccordion.dark .slide > h4 {line-height:210%; background:#222; text-shadow: 0 -1px 0 #030303;}
+.liteAccordion.dark .slide > h4 span {background: #353535; color:#f6f6f6;}
+.liteAccordion.dark .slide > h4.selected span, .liteAccordion.dark .slide > h4.selected span:hover {
+    background:linear-gradient(to right,  #353535, #555555);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#353535', endColorstr='#555555',GradientType=1 );
+}
+.liteAccordion.dark .slide > h4.selected b {background: linear-gradient(to top,  #3a3a3a 0%,#363636 100%);}
+.liteAccordion.dark .slide > div {background:#222;}
+

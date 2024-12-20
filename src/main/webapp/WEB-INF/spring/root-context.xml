@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+
+	<!-- 데이터베이스(DBMS)와 스프링을 연결(연동) : DataSource -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.mariadb.jdbc.Driver" />
+		<property name="url" value="jdbc:mariadb://127.0.0.1:3306/carnex" />
+		<property name="username" value="dba" />
+		<property name="password" value="dbapwd" />
+	</bean>
+	
+	<!-- SQL문을 수행 : SqlSession -->
+	<!-- SqlSessionFactory에서 SQL문 매핑 정보를 설정한 후 SqlSession에 주입한다. -->
+	<!-- name="configLocation"은 Mybatis에 대한 설정 파일의 경로를 지정한다. -->
+	<!-- classpath:/ 는 src/main/resources이다. -->
+	<!-- name="mapperLocations"은 SQL문을 저장하는 xxxMapper.xml 파일의 경로를 지정한다. -->
+	<!-- classpath:mappers/ 는 src/main/resources/mappers이다. -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:/mybatis-config.xml" />
+		<property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml" />
+	</bean>
+
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
+	</bean>
+	
+	<context:component-scan base-package="org.carnex.user.vo" />
+	<context:component-scan base-package="org.carnex.admin.vo" />
+	<context:component-scan base-package="org.carnex.board.vo" />
+	<context:component-scan base-package="org.carnex.goods.vo" />
+	<context:component-scan base-package="org.carnex.order.vo" />
+	<context:component-scan base-package="org.carnex.contract.vo" />
+	<context:component-scan base-package="org.carnex.util" />
+	
+	<context:component-scan base-package="org.carnex.admin.service" />
+	<context:component-scan base-package="org.carnex.user.service" />
+	<context:component-scan base-package="org.carnex.board.service" />
+	<context:component-scan base-package="org.carnex.goods.service" />
+	<context:component-scan base-package="org.carnex.contract.service" />
+	
+	<context:component-scan base-package="org.carnex.admin.persistence" />
+	<context:component-scan base-package="org.carnex.user.persistence" />
+	<context:component-scan base-package="org.carnex.board.persistence" />
+	<context:component-scan base-package="org.carnex.goods.persistence" />
+	<context:component-scan base-package="org.carnex.contract.persistence" />
+	
+	
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

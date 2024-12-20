@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+body {
+  background: url('/resources/images/index/fp-bg1.jpg') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+}
+section {
+  display:flex; margin:60px auto 120px;
+  list-style:none;
+  text-align: center;
+}
+
+a p {cursor: pointer; transition: all 200ms linear;}
+a p:hover {text-decoration: none;}
+.reg-log {font-family:"pretendard"; font-size: 34px; font-weight:600; cursor: pointer;}
+span {color: #68ade2;}
+
+.link {margin-top: 14px; font-size: 14px; color: #888;}
+.link:hover {color: #ffeba7;}
+
+h4 {padding-bottom: 30px; cursor: pointer;}
+
+.login-logo {
+  margin: 100px auto 40px;
+  letter-spacing: 2px;
+}
+.login-logo h3 {padding:0; font-size: 70px;}
+
+
+/* ========== 로그인 */
+.login {margin:0 auto;}
+.input-form {display: block; margin: 0 auto; width: 100%;}
+
+.tab-content {display: none;}
+.tab-content.on {display: block;}
+.chack-btn > input[type="radio"] {display:none;}
+.chack-btn > input[type="radio"]:checked + .tabs-btn h4 {color: #68ade2;}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+  position: absolute;
+  left: -9999px;
+}
+.checkbox:checked + label .login-check,
+.checkbox:not(:checked) + label .singup-check {color: #f6f6f6;}
+
+.card-3d-wrap {
+  position: relative; width: 480px; height: 800px;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+.card-3d-wrapper {
+  position:absolute; top: 0; left: 0; width: 100%; height: 100%;
+  transform-style: preserve-3d;
+  transition: all 600ms ease-out; 
+}
+
+.event-bn {
+  margin-top: 50px; width: 100%; height: 160px; 
+  background: url('/resources/images/campaign/cp-traffic-law-bg3.png') no-repeat center center;
+  background-size: cover;
+}
+.login-txt {width: 100%;}
+
+
+
+/* ======== 전환 */
+.card-front, .card-back {
+  position: absolute; left: 0; top: 20px; width: 100%; height: 100%;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.card-back {transform: rotateY(180deg);}
+
+
+
+/* ========= 회원가입 */
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {transform: rotateY(180deg);}
+.center-wrap{
+  position: absolute; display: block; top: 50%; left: 0; width: 100%; padding: 0 35px;
+  transform: translate3d(0, -50%, 35px) perspective(100px);
+  z-index: 20;
+}
+
+.input-form li {position: relative;}
+.input-form li p {
+  padding: 10px 0 0 10px; height: 28px; 
+  font-size: 14px; color: rgba(255, 255, 255, 0.6); text-align: left;
+}
+
+.input-form li:first-child,
+.input-form li:nth-child(5), 
+.input-form li:nth-child(8), 
+.input-form li:nth-child(10) {display: flex;}
+
+.input-form li:first-child .input-icon, 
+.input-form li:nth-child(5) .input-icon,
+.input-form li:nth-child(10) .input-icon {top: 10px;}
+
+.input-form li:nth-child(8) label:nth-child(2) {margin: 10px 0 0 0;}
+.gender {appearance: none;}
+.gender:checked + label {background: #68ade2; color: #f6f6f6;}
+input[type='date']::-webkit-calendar-picker-indicator {
+  position: absolute; width: 100%; height: 100%;
+  background: transparent; color: transparent; cursor: pointer;
+}
+.form-style {margin-top: 10px;}
+.form-style:focus,
+.form-style:active {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,0.2);
+}
+.input-icon {
+  position: absolute; top: 0; left: 18px; height: 48px;
+  color: #ffeba7; font-size: 24px; line-height: 48px; text-align: left;
+  transition: all 200ms linear;
+}
+
+.btn {margin-top: 20px; width: 130px;}
+.btn-sub {width: 100%; height: 48px;}
+.btn-chack {
+  	margin: 10px 0 0 10px; width: 250px; height: 48px;
+	color: #181600; background: #ffeba7; cursor: pointer;
+}
+
+
+

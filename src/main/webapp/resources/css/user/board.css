@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+.bd-reg-wrap {
+	display:flex;
+}
+
+
+/* list */
+.bd-info-wrap {display:flex; justify-content:space-between; flex-wrap:wrap;}
+.bd-info-item {width:300px; margin:30px 50px 0 0; padding:30px; background:#8000ff;}
+.bd-info-item:nth-child(4n) {margin-right:0;}
+.pagenation {display:flex; justify-content:center; margin-top:50px;}
+.pagenation a {width:40px; height:40px; text-align:center; line-height:37px; color:#f6f6f6; border:1px solid #f6f6f6; border-right:0;}
+.pagenation li:first-child a {border-radius:10px 0 0 10px; border-left:1px solid #f6f6f6;}
+.pagenation li:last-child a {border-radius:0 10px 10px 0; border-right:1px solid #f6f6f6;}
+.prev, .next {width:60px; height:40px;}
+.pagenation a.active {color:#06f;}
+
+
+/* register */
+.bd-reg-frm {width:700px; margin:35px auto; padding-top:50px;}
+.bd-reg-frm li {display:flex; justify-content:center; padding:5px 0;}
+.bd-reg-frm li:first-child {align-items: flex-end;}
+.bd-reg-frm li input {
+	width:100%; height:40px; padding:0 20px; 
+	font-size:16px; color: #333;
+	border: 1px solid #d1d1d1;
+	background:#f6f6f6; 
+}
+.bd-reg-frm li:nth-child(3) input {padding-top:4px;}
+.bd-reg-frm li:last-child button, .bd-reg-frm li:last-child a {margin:0 5px;}
+.bd-reg-frm li input::placeholder {font-size:16px; color: #888; line-height:50px;}
+
+
+
+/* view */
+section {width:800px; margin:150px auto 0; padding: 0 50px 50px; color:#333; background:rgba(255, 255, 255, 0.9);}
+.bd-view {width:700px; margin:35px auto; padding-top:50px; padding-bottom:33px;}
+.bd-view h1 {font-size:28px; line-height:40px;}
+.bd-view:first-child p {font-size:16px; margin-top:15px;}
+.bd-view-wrap {display: flex; align-items: center;}
+.bd-side-btn {display:flex; -webkit-box-align:center; align-items:center; gap:8px; width:fit-content; margin-left:auto;}
+.bd-side-btn a {line-height: 34px;}
+.side-btn {
+	height:32px; padding:0 17px; 
+	background:rgba(255, 255, 255, 0.5); color: #333;
+	border-radius:4px; box-shadow:inset 0 0 0 1px; 
+}
+.side-btn:hover {background:#a4a4a4; box-shadow: 0 8px 24px 0 rgba(16,39,112,0.1);}
+.bd-content {margin:15px 0; padding:10px 20px; background:#f6f6f6; word-break: break-all;}
+.bd-content img {width:100%;}
+
+.uploadResult {width:100%; margin:30px auto; padding:10px 0 ;}
+.uploadResult ul {margin:0 auto;}
+.uploadResult ul li {display:flex; justify-content:center; flex-wrap:wrap; padding:30px;}
+.uploadResult ul li p {display:flex; justify-content:center; width:100%;}
+.uploadResult ul li img {width:100px; height:100px; object-fit:contain; cursor:pointer;}
+
+.reply-content {margin-top: 20px; padding: 10px 20px; width: 100%; background: #f6f6f6; word-break: break-all;}
+.reply-content img {width:100%;}
+.reply-content-wrap {margin:20px auto; padding:15px ; border:1px solid #888;}
+.reply-content-wrap li {width:100%; margin:0 auto; line-height: 25px;}
+.reply-content-wrap li:first-child {display: flex; justify-content: space-between; align-items: center;}
+.reply-content-wrap li:first-child img {width: 50px; height: 50px; border-radius: 50%;}
+.reply-content-wrap li:nth-child(2) {display: flex;}
+
+.reply-txt {margin-left: 20px;}
+.reply-txt > p {font-size: 20px; font-weight: 700;}
+.reply-day {display: flex;}
+.reply-day p {margin-right: 20px;}
+
+.reply-reg-wrap {margin-top: 40px;}
+.bd-reg-content, .reply-list{width:700px; margin:0 auto; background:#ddd;}
+.bd-reg-content {display: none; padding: 0 20px 20px;}
+.bd-reg-content > p {width:250px;}
+.bd-reg-content li {}
+.reply-btn {
+	display: flex; justify-content:space-between; margin:0 auto; padding:16px 20px; width: 700px; 
+	background:rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+
+.reply-list {padding: 20px;}
+.reply-list h2 {color: #333;}
+.reply-textarea {justify-content:center;}
+
+.ck-title {display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 10px; padding: 20px 10px 0;}
+
+.bd-view-btn {margin: 10px auto; width: fit-content;}
+.off {display: none;}
+
+
+
+@media screen and (max-width:759px) {
+	section, .bd-reg-frm {width: 100%;}
+	section {padding: 0 0 50px;}
+	.bd-view {padding: 20px 20px 0;}
+	.bd-view:first-child p {margin-top: 0;}
+	.bd-view-wrap {margin: 15px 0;}
+	
+	.reply-txt {margin-left: 10px;}
+	.reply-day p {margin-right: 0;}
+	.reply-day, .bd-side-btn {flex-wrap: wrap;}
+	.bd-side-btn {width: 62px;}
+	
+	.bd-view, .reply-list, .bd-reg-content, .reply-btn {width: 100%;}
+	
+	
+	.bd-view-wrap > .bd-side-btn {flex-wrap: nowrap; width: fit-content;}
+	
+}

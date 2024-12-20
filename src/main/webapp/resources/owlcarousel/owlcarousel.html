@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owl Carousel Plugin</title>
+    <link rel="shortcut icon" href="../imgs/favicon.ico">
+    <link rel="stylesheet" href="owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+    <script src="owlcarousel/js/owl.carousel.js"></script>
+    <script>
+        $(function(){
+            $(".owl-carousel").owlCarousel({
+                loop: true, 
+                nav: true,
+                responsiveClass: true,
+                responsive: { //반응형: (미디어쿼리)중단점에 따른 설정 
+                    0: {items:1},
+                    700: {items:2}, //margin 안넣음
+                    1000: {
+                        items:3,
+                        nav: true,
+                        loop: false,
+                        margin: 25
+                    }, //margin 넣음
+                    1400: {
+                        items:4, //여백은 3개 
+                        nav: true,
+                        loop: false,
+                        margin: 50
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="owl-container">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class= "item-bg item-bg-1"></div>
+                <div class="item-contents">
+                    <h3>owl-carousel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">more</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class= "item-bg item-bg-2"></div>
+                <div class="item-contents">
+                    <h3>owl-carousel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">more</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class= "item-bg item-bg-3"></div>
+                <div class="item-contents">
+                    <h3>owl-carousel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">more</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class= "item-bg item-bg-4"></div>
+                <div class="item-contents">
+                    <h3>owl-carousel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">more</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class= "item-bg item-bg-1"></div>
+                <div class="item-contents">
+                    <h3>owl-carousel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">more</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class= "item-bg item-bg-2"></div>
+                <div class="item-contents">
+                    <h3>owl-carousel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">more</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class= "item-bg item-bg-3"></div>
+                <div class="item-contents">
+                    <h3>owl-carousel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">more</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class= "item-bg item-bg-4"></div>
+                <div class="item-contents">
+                    <h3>owl-carousel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">more</a>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</body>
+</html>

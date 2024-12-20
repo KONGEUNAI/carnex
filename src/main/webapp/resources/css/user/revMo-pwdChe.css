@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+
+body {
+  background: url('/resources/images/index/fp-bg1.jpg') no-repeat center center;
+  background-size: cover;
+  width: 100%; height: 100vh;
+}
+
+.mb-rb-wrap {
+	margin:150px auto; padding:30px; width:350px;
+	border: 2px solid rgba(255,255,255,0.5);
+	border-radius: 20px;
+	backdrop-filter: blur(10px);
+	backface-visibility: hidden;
+}
+.del-icon {
+	margin: 0 auto; width: 100px; height: 100px;
+	font-size: 50px; text-align: center; line-height: 102px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.2);
+}
+.input-form li {position: relative;}
+.input-icon {
+  position: absolute; top: 0; left: 18px; height: 48px;
+  color: #ffeba7; font-size: 24px; line-height: 48px; text-align: left;
+  transition: all 200ms linear;
+}
+
+
+.mb-rb-btn {display:flex; justify-content:center; margin-top: 20px;}
+.mb-rb-btn > button {margin-right:10px; width: 100%;}
+.mb-rb-btn > a {width: 100%;}
+
+.rb-msg {margin:30px auto 10px; color:#f6f6f6; text-align:center;}
+
+
+.error-message {
+	margin-top: 20px; padding: 10px; width: 100%; color: #ff0010;
+	font-size: 15px;
+	background: rgb(255,255,255); border-radius: 4px; 
+}
+
+
+#revModiFrm [type=date], #revModiFrm [type=time] {
+	width:100%; margin:10px auto;	
+    font-family: "pretendard";
+    color:#f6f6f6;
+}
+#revModiFrm [type=date]::-webkit-calendar-picker-indicator,
+#revModiFrm [type=time]::-webkit-calendar-picker-indicator {
+  position: absolute; width: 100%; height: 100%;
+  background: transparent; color: transparent; cursor: pointer;
+}
+
+

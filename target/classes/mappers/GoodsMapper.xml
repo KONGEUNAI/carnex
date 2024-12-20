@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.admin.mappers.goods">
+
+	<insert id="register" parameterType="org.carnex.goods.vo.GoodsVO">
+		INSERT INTO goods_tbl (
+			staff_id
+			, car_brand
+			, car_type
+			, car_model
+			, car_price
+			, car_title
+			, car_subtitle
+			, car_content
+			, car_accident
+			, car_zone
+			, car_thumbimg
+			, car_img
+			, car_status
+			, car_reg_date
+		) VALUES (
+			#{staff_id}
+			, #{car_brand}
+			, #{car_type}
+			, #{car_model}
+			, #{car_price}
+			, #{car_title}
+			, #{car_subtitle}
+			, #{car_content}
+			, #{car_accident}
+			, #{car_zone}
+			, #{car_thumbimg}
+			, #{car_img}
+			, #{car_status}
+			, now()
+		)
+	</insert>
+
+	<select id="getGoodsList" parameterType="String" resultType="org.carnex.goods.vo.GoodsVO">
+		SELECT * FROM goods_tbl WHERE car_type LIKE CONCAT('%', #{keyword}, '%') AND car_status NOT IN ('예약중', '판매완료') LIMIT 0, 6 
+	</select>
+	
+	<select id="infiniteScroll" parameterType="hashMap" resultType="org.carnex.goods.vo.GoodsVO">
+		<![CDATA[SELECT * FROM goods_tbl WHERE car_type LIKE CONCAT('%', #{keyword}, '%') AND car_num > #{cnoToStart} AND car_status NOT IN ('예약중', '판매완료') LIMIT 6]]>
+	</select>
+	
+	<select id ="goodsPartList" parameterType="hashMap" resultType="org.carnex.goods.vo.GoodsVO" >
+		SELECT *
+		FROM goods_tbl
+		WHERE car_type LIKE CONCAT('%', #{car_type}, '%')
+			AND car_title LIKE CONCAT('%', #{keyword}, '%')
+		<if test="car_status != null and car_status != ''">
+			AND car_status=#{car_status}
+		</if>
+		<if test="car_status == ''">
+			AND car_status NOT IN ('예약중', '판매완료') 
+		</if>
+	</select>
+	
+	<select id="getCarOne" resultType="org.carnex.goods.vo.GoodsVO" parameterType="int">
+		SELECT * FROM goods_tbl WHERE car_num = #{car_num}
+	</select>
+	
+	<select id="getCarMine" resultType="org.carnex.goods.vo.GoodsVO" parameterType="int">
+		SELECT * FROM goods_tbl WHERE car_num = #{car_num}
+	</select>
+	
+	<update id="modify" parameterType="org.carnex.goods.vo.GoodsVO">
+		UPDATE goods_tbl SET 
+			car_brand = #{car_brand}
+			, car_type = #{car_type}
+			, car_model = #{car_model}
+			, car_price = #{car_price}
+			, car_title = #{car_title}
+			, car_subtitle = #{car_subtitle}
+			, car_content = #{car_content}
+			, car_accident = #{car_accident}
+			, car_zone= #{car_zone}
+			, car_thumbimg = #{car_thumbimg}
+			, car_img = #{car_img}
+			, car_status = #{car_status}
+			, car_up_date = now()
+		WHERE car_num = #{car_num}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM goods_tbl WHERE car_num = #{car_num}
+	</delete>
+	
+	<update id="updateStatus" parameterType="org.carnex.goods.vo.GoodsVO">
+		UPDATE goods_tbl SET
+			car_status = '판매완료',
+			car_up_date = now()
+		WHERE car_num = #{car_num}
+	</update>
+	
+	<select id ="goodsCompCount" resultType="int" >
+		SELECT COUNT(*) FROM goods_tbl WHERE car_status='판매완료'
+	</select>
+	
+	<select id ="goodsIngCount" resultType="int" >
+		SELECT COUNT(*) FROM goods_tbl WHERE car_status='예약중'
+	</select>
+	
+	<select id ="goodsCount" resultType="int" >
+		SELECT COUNT(*) FROM goods_tbl WHERE car_status NOT IN ('예약중', '판매완료')
+	</select>
+	
+	<select id ="goodsTypeCount" resultType="int" >
+		SELECT COUNT(*) FROM goods_tbl WHERE car_type=#{car_type}
+	</select>
+	
+	<select id="getAllCount" resultType="hashMap">
+		SELECT car_type, COUNT(*) AS count FROM goods_tbl GROUP BY car_type;
+	</select>
+	
+	<insert id="makeRev"  parameterType="org.carnex.contract.vo.ReservationVO">
+		INSERT INTO reservation_tbl (
+			user_id 
+			, staff_id
+			, car_num 
+			, rev_status
+			, rev_time
+			, rev_date
+			, rev_reg_date
+		) VALUES (
+			#{user_id} 
+			, #{staff_id}
+			, #{car_num}
+			, "예약중"
+			, #{rev_time}
+			, #{rev_date}
+			, now()
+		)
+	</insert>
+	
+	<update id="updateRevStatus"  parameterType="int">
+		UPDATE goods_tbl SET
+			car_status = '예약중'
+		WHERE car_num = #{car_num}
+	</update>
+	
+	<select id="getRevOne" parameterType="org.carnex.contract.vo.ReservationVO" resultType="org.carnex.contract.vo.ReservationVO">
+		SELECT * FROM reservation_tbl
+		WHERE user_id = #{user_id} AND
+		staff_id = #{staff_id} AND
+		car_num = #{car_num} AND
+		rev_date = #{rev_date} AND
+		rev_time = #{rev_time}
+	</select>
+	
+	<select id="revSuccess" resultType="org.carnex.contract.vo.ReservationVO">
+		SELECT * FROM reservation_tbl
+		WHERE rev_no = #{rev_no}
+	</select>
+	
+	<select id="getRevList" parameterType="String" resultType="org.carnex.contract.vo.ReservationVO">
+        SELECT * FROM reservation_tbl WHERE staff_id =#{staff_id}
+    </select>
+	
+	<delete id="deleteReserve">
+		DELETE FROM reservation_tbl WHERE car_num = #{car_num}
+	</delete>
+	
+	<update id="updateCarStatus"  parameterType="int">
+		UPDATE goods_tbl SET
+			car_status = '판매중'
+		WHERE car_num = #{car_num}
+	</update>
+	
+	<select id="firstGoods" resultType="org.carnex.goods.vo.GoodsVO">
+		SELECT * FROM goods_tbl ORDER BY car_num DESC LIMIT 6
+	</select>
+	
+	<select id="secondGoods" resultType="org.carnex.goods.vo.GoodsVO">
+		SELECT * FROM goods_tbl ORDER BY car_num DESC LIMIT 6, 3
+	</select>
+	
+</mapper>

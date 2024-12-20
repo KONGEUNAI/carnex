@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+h4 {text-transform:uppercase;}
+
+/* ========== 배너 이미지 지정 ========== */
+.bn {background:url('/resources/images/deal/htd-bg.jpg') no-repeat center center; background-size: cover;}
+
+/* ========== 아코디언 메뉴 위치 및 이미지 크기 지정 ========== */
+.htd-sl-container img {object-fit: cover;}
+
+/* ========== 아코디언 메뉴 텍스트 위치 지정 및 하버 이펙트 */
+.htd-sl-txt {
+	position:absolute; top:0;
+	color:#f6f6f6; text-align:center; transform:scale(2.5); opacity:0;
+	transition:all 0.1s ease-in 0.6s;
+}
+.sl-btn {position:absolute; opacity:0;}
+img {transition:all 0.3s ease-in 0.3s;}
+.htd-sl-container > ol > li > h4 {font-family:"Noto Sans KR";}
+.htd-sl-wrap:hover img {opacity:0.5;}
+.htd-sl-wrap:hover .htd-sl-txt {top:50%; transform:scale(1); opacity:1;}
+.htd-sl-wrap:hover .sl-btn {opacity:1;}
+
+/* ========== 카드 메뉴 스타일 속성 ========== */
+.htd-ph-item {
+    position:relative;
+    border:4px solid #596a72;
+    border-radius:50%; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); overflow: hidden;
+    transition: all 0.4s ease-in;
+}
+.htd-ph-container > li {background:#444; border-radius:10px;}
+.htd-ph-container > li > h4 {text-align: center;}
+.htd-ph-container > li > p {padding-top: 30px; text-align:center;}
+.ph-bg-1 {background:url('/resources/images/deal/ph-bg1.jpg') no-repeat center center;}
+.ph-bg-2 {background:url('/resources/images/deal/ph-bg2.jpg') no-repeat center center;}
+.ph-bg-3 {background:url('/resources/images/deal/ph-bg3.jpg') no-repeat center center;}
+
+.col{cursor:pointer;}
+.container{transform-style:preserve-3d; perspective:1000px;}
+.front, .back{
+    text-align:center; color:#f6f6f6; font-size:50px; font-family:'courgette'; text-transform:capitalize;
+    backface-visibility:hidden; border-radius:50%; 
+    transition: 0.7s all cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.front:after{
+    content:'';
+    position:absolute; top:0; left:0; z-index:1; width:100%; height:100%;
+    display:block; background-color:#000; opacity:0.2; 
+}
+.back {position:absolute; top:0; left:-1%; background:linear-gradient(45deg,  #596a72 0%,#555 100%);}
+.inner{
+    position:absolute; left:0; top:50%; width:100%; padding:20px;
+    box-sizing:border-box; perspective:inherit; transform:translateY(-50%) translateZ(60px) scale(1); z-index:2;
+}
+.container .back{transform:rotateY(180deg); transform-style:preserve-3d;}
+.container:hover .back{transform:rotateY(0deg); transform-style:preserve-3d;}
+.container:hover .front{transform:rotateY(-180deg); transform-style:preserve-3d;}
+.htd-ph-item:hover {border:4px solid #f6f6f6; box-shadow:none;}
+
+/* ========== 카드 메뉴 버튼 스타일 속성 ========== */
+.htd-btn {
+    position:relative; width:150px; height:50px; margin:30px auto 0;
+    color:#f6f6f6; line-height:50px; text-align:center;
+    text-transform:uppercase; border:solid 2px #f6f6f6; border-radius:20px;
+    overflow:hidden; z-index:1;
+    transition:0.5s ease-in-out;
+}
+.htd-btn:before, .htd-btn:after {
+    position:absolute; top:50%; width:20px; height:20px;
+    content:"";
+    background-color:#f6f6f6;
+    border-radius:50%;
+    z-index:-1;
+}
+.htd-btn:before {left:-20px; transform:translate(-50%, -50%);}
+.htd-btn:after {right:-20px; transform:translate(50%, -50%);}
+.htd-btn:hover {color:#333;}
+.htd-btn:hover:before {
+    animation:criss-cross-left 0.8s both;
+    animation-direction:alternate;
+}
+.htd-btn:hover:after {
+    animation:criss-cross-right 0.8s both;
+    animation-direction:alternate;
+}
+
+@keyframes criss-cross-left {
+    0% {left:-20px;}
+    50% {left:50%; width:20px; height:20px;}
+    100% {left:50%; width:375px; height:375px;}
+}
+
+@keyframes criss-cross-right {
+    0% {right:-20px;}
+    50% {right:50%; width:20px; height:20px;}
+    100% {right:50%; width:375px; height:375px;}
+}
+
+/* ========== 미디어 쿼리 FHD 영역 ========== */
+@media screen and (min-width:1400px) {
+    .owl-container {display: none;}
+/* ========== 아코디언 메뉴 스타일 속성 ========== */
+    .htd-sl-container {margin-top:60px;}
+		.htd-sl-txt {left:30%; width:45%; font-size:24px;}
+    .sl-btn {top: -35%;}
+
+    /* ========== 카드 메뉴 스타일 속성 ========== */
+    .htd-ph-container {display:flex; justify-content:space-between; align-items:center; margin-top:60px;}
+		.htd-ph-container > li {width:400px; padding:50px;}
+    .col {width:300px; height:300px;}
+    .front, .back{width:300px; height: 300px;}
+    .htd-ph-container > li h4 {padding-top:50px;}
+}
+
+/* ========== 미디어 쿼리 HD 영역 ========== */
+@media screen and (min-width:1050px) and (max-width:1399px) {
+    .owl-container {display: none;}
+    .htd-ph-container > li:first-child {display: none;}
+    /* ========== 아코디언 메뉴 스타일 속성 ========== */
+    .htd-sl-container {margin-top:50px;}
+		.htd-sl-txt {left:25%; width:55%; font-size:20px;}
+    .sl-btn {top: -35%;}
+    
+    /* ========== 카드 메뉴 스타일 속성 ========== */
+    .htd-ph-container {display:flex; justify-content:center; align-items:center; margin-top:50px;}
+    .htd-ph-container > li {width:400px; margin:0 50px; padding:50px;}
+    .col {width:300px; height:300px;}
+    .front, .back{width:300px; height: 300px;}
+    .htd-ph-container > li h4 {padding-top:50px;}
+}
+
+/* ========== 미디어 쿼리 Tablet 영역 ========== */
+@media screen and (min-width:760px) and (max-width:1049px) {	
+    .owl-container {display: none;}
+    .htd-ph-container > li:first-child {display: none;}
+    /* ========== 아코디언 메뉴 스타일 속성 ========== */
+    .htd-sl-container {margin-top:50px;}
+		.htd-sl-txt {left:28%; width:50%;}
+    .sl-btn {top: -35%;}
+
+    /* ========== 카드 메뉴 스타일 속성 ========== */
+    .htd-ph-container {display:flex; justify-content:center; align-items:center; margin-top:50px;}
+		.htd-ph-container > li {width:350px; margin:0 15px; padding:30px;}
+    .htd-ph-item {width: 280px; height: 280px;}
+    .col {width:280px; height:280px;}
+    .front, .back{width:280px; height: 280px;}
+		.htd-ph-container > li h4 {padding-top:30px;}
+}
+
+/* ========== 미디어 쿼리 Mobile 영역 ========== */
+@media screen and (max-width:759px){
+    .htd-sl-container {display:none;}
+    /* ========== owl-carousel 스타일 속성 ========== */
+    .owl-container {width: 350px; height:550px; margin: 0 auto; margin-top: 40px; overflow:hidden;}
+    .owl-carousel {width:100%; height:100%;}
+    .owl-prev, .owl-next, .owl-dots {position:absolute;}
+    .owl-prev {left:20px; top:40%;}
+    .owl-next {right:20px; top:40%;}
+    .owl-prev i, .owl-next i {font-size:40px;}
+    .owl-dots {bottom:-8px; width:100%; z-index:2;}
+    .item {width:350px; padding-bottom:30px; background:#555; border: 1px solid #fff; border-radius:10px;}
+    .item-bg {height:250px; background: no-repeat center center; border-radius:10px 10px 0 0; opacity:0.7;}
+    .sl-bg-1 {background: url('/resources/images/deal/sl-bg1.jpg'); background-size: cover;}
+    .sl-bg-2 {background: url('/resources/images/deal/sl-bg2.jpg'); background-size: cover;}
+    .sl-bg-3 {background: url('/resources/images/deal/sl-bg3.jpg'); background-size: cover;}
+    .item-contents {text-align:center;}
+    .item-contents > h4 {padding-top:30px;}
+    .item-contents > p {margin:0 auto; padding-top:30px; width:70%;}
+
+    /* ========== 카드 메뉴 스타일 속성 ========== */
+    .htd-ph-container {display:flex; flex-wrap:wrap; width:350px; margin:40px auto 0;}
+    .col {width:290px; height:280px;}
+    .front, .back{width:290px; height: 280px;}
+    .htd-ph-container > li {width:100%; padding:30px; margin-bottom:40px;}
+    .htd-ph-container > li:last-child {margin-bottom:0;}
+		.htd-ph-container > li h4 {padding-top:30px;}
+}
+
+
+

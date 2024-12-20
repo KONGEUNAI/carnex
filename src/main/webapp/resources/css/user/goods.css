@@ -1,0 +1,200 @@
+* {margin:0; padding:0; box-sizing:border-box;}
+.bn {background:url('/resources/images/forsale.jpg'); background-size:cover;}
+
+/*
+.filter-radio {flex-wrap:wrap; padding:0 10px;}
+.filter-radio li {margin:20px 5px 0;}
+*/
+
+@media screen and (min-width:1400px) {
+	section {margin-top: 200px;}
+	h4 {font-size:42px;}
+	h5 {font-size:20px;}
+	.sec-01 {display: flex; justify-content: space-between; margin: 40px auto 0; width: 1300px;}
+
+	.content {display:flex; flex-wrap: wrap; width: 900px; color: #f6f6f6;}
+	.content li {
+    margin: 0 0 20px 20px; padding: 10px; width: 280px; height: 380px;
+    border-radius: 10px; background: linear-gradient(45deg, #425369, #132133);
+    box-shadow: 0 0 0 2px #C1C8D1 inset;
+  }
+	.content li:nth-child(3n+1) {margin-left: 0;}
+	.content li img {
+		display: block; margin-bottom: 20px;
+		width: 100%; height: 200px;
+		border-radius: 10px;
+		object-fit: cover;
+	}
+	.content li h5 {padding-left: 6px; color: #f6f6f6; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+	.content li p {padding: 6px 0 0 6px;}
+	.content li a {width: 100%; margin-top: 20px;}
+	
+	#filter-trigger {display: none;}
+	.filter {
+		position: sticky; padding: 20px; top: 20%; width: 380px; height: 320px;
+		text-align: center;
+		border: 3px solid rgb(255, 255, 255); border-radius: 10px;
+		box-shadow: 0 4px 10px 0 rgba(0,0,0,0.6) inset;
+	}
+	.filter h5 {margin: 10px 0 20px 0;}
+	.filter-op-check {
+		width: 100%; padding: 8px 16px;
+		border: 1px solid #f6f6f6; border-radius: 20px;
+		cursor: pointer;
+	}
+	.filter-op:checked + label {background: #68ade2;}
+	.filter button {margin-top: 20px; width: 100%;}
+
+	.filter-radio {display: flex; justify-content: space-between; flex-wrap: wrap;}
+	.filter-radio li {width: 100px; margin-bottom: 10px;}
+	.filter-radio li input {display: none;}
+
+	#loading {margin-top: 60px; text-align: center;}
+}
+
+@media screen and (min-width:1050px) and (max-width:1399px) {
+  section {margin-top: 200px;}
+	h4 {font-size:42px;}
+	h5 {font-size:20px;}
+	.sec-01 {display: flex; justify-content: space-between; margin: 40px auto 0; width: 1000px;}
+
+	.content {display:flex; flex-wrap: wrap; width: 600px; color: #f6f6f6;}
+	.content li {
+    margin: 0 0 20px 20px; padding: 10px; width: 280px; height: 380px;
+    border-radius: 10px; background: linear-gradient(45deg, #425369, #132133);
+    box-shadow: 0 0 0 2px #C1C8D1 inset;
+  }
+	.content li:nth-child(odd) {margin: 0 0 20px 0;}
+	.content li img {
+		display: block; margin-bottom: 20px;
+		width: 100%; height: 200px;
+		border-radius: 10px;
+		object-fit: cover;
+	}
+	.content li h5 {padding-left: 6px; color: #f6f6f6; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+	.content li p {padding: 6px 0 0 6px;}
+	.content li a {width: 100%; margin-top: 20px;}
+	
+	#filter-trigger {display: none;}
+	.filter {
+		position: sticky; padding: 20px; top: 20%; width: 380px; height: 320px;
+		text-align: center;
+		border: 3px solid rgb(255, 255, 255); border-radius: 10px;
+		box-shadow: 0 4px 10px 0 rgba(0,0,0,0.6) inset;
+	}
+	.filter h5 {margin: 10px 0 20px 0;}
+	.filter-op-check {
+		width: 100%; padding: 8px 16px;
+		border: 1px solid #f6f6f6; border-radius: 20px;
+		cursor: pointer;
+	}
+	.filter-op:checked + label {background: #68ade2;}
+	.filter button {margin-top: 20px; width: 100%;}
+
+	.filter-radio {display: flex; justify-content: space-between; flex-wrap: wrap;}
+	.filter-radio li {width: 100px; margin-bottom: 10px;}
+	.filter-radio li input {display: none;}
+
+	#loading {margin-top: 60px; text-align: center;}
+}
+
+@media screen and (min-width:760px) and (max-width:1049px) {	
+	section {margin-top: 100px;}
+	h4 {font-size:42px;}
+	h5 {font-size:20px;}
+	.sec-01 {margin: 40px auto 0; width: 100%;}
+
+	.content {display:flex; flex-wrap: wrap; width: 730px; color: #f6f6f6;}
+	.content li {margin: 0 0 20px 20px; padding: 10px; width: 355px; height: 380px;
+		border-radius: 10px; background: linear-gradient(45deg, #425369, #132133); box-shadow: 0 0 0 2px #C1C8D1 inset;}
+	.content li:nth-child(odd) {margin: 0 0 20px 0;}
+	.content li img {
+		display: block; margin-bottom: 20px;
+		width: 100%; height: 200px;
+		border-radius: 10px;
+		object-fit: cover;
+	}
+	.content li h5 {padding-left: 6px; color: #f6f6f6;  text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+	.content li p {padding: 6px 0 0 6px;}
+	.content li a {width: 100%; margin-top: 20px;}
+
+	.filter {
+		position: sticky; padding: 20px; bottom: -240px; 
+		width: 100%; height: 360px;
+		text-align: center;
+		background: #222;
+		transition: all 0.4s ease-in;
+		border: 3px solid rgb(255, 255, 255); border-radius: 10px;
+		box-shadow: 0 4px 10px 0 rgba(0,0,0,0.6) inset;
+	}
+
+	#filter-trigger {font-size: 24px;}
+	.active {bottom: 0;}
+	.off {display: none;}
+
+	.filter h4 {padding: 10px 0 10px; font-size: 24px;}
+	.filter h5 {margin: 20px 0; font-size: 18px;}
+	.filter-radio {display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%;}
+	.filter-radio li {margin-bottom: 10px;}
+	.filter-radio li input {display: none;}
+	.filter-op-check {
+		width: 210px; padding: 8px 22px;
+		border: 1px solid #f6f6f6;
+		border-radius: 20px;
+		cursor: pointer;
+	}
+	.filter-op:checked + label {background: #68ade2;}
+	.filter button {margin-top: 20px; width: 100%;}
+
+	#loading {margin-top: 60px; text-align: center;}
+}
+
+@media screen and (max-width:759px){
+	section {margin-top: 100px; padding: 0 20px;}
+	h4 {font-size:34px;}
+	h5 {font-size:24px;}
+	.sec-01 {margin: 20px auto 0; width: 100%;}
+
+	.content {display:flex; flex-wrap: wrap; width: 100%; color: #f6f6f6;}
+	.content li {margin-bottom: 20px; padding: 10px; width: 100%; height: 380px;
+		border-radius: 10px; background: linear-gradient(45deg, #425369, #132133); box-shadow: 0 0 0 2px #C1C8D1 inset;}
+	.content li img {
+		display: block; margin-bottom: 20px;
+		width: 100%; height: 200px;
+		border-radius: 10px;
+		object-fit: cover;
+	}
+	.content li h5 {padding-left: 6px; color: #f6f6f6;  text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+	.content li p {padding: 6px 0 0 6px;}
+	.content li a {width: 100%; margin-top: 20px;}
+
+	.filter {
+		position: sticky; padding: 10px; bottom: -220px; 
+		width: 100%; height: 325px;
+		text-align: center;
+		background: #222;
+		transition: all 0.4s ease-in;
+		border: 3px solid rgb(255, 255, 255); border-radius: 10px;
+		box-shadow: 0 4px 10px 0 rgba(0,0,0,0.6) inset;
+	}
+
+	#filter-trigger {margin-top: 10px; font-size: 24px;}
+	.active {bottom: 0;}
+	.off {display: none;}
+
+	.filter h4 {padding: 10px 0 20px; font-size: 24px;}
+	.filter h5 {margin: 10px 0; font-size: 18px;}
+	.filter-radio {display: flex; justify-content: space-between; flex-wrap: wrap; width: 100%;}
+	.filter-radio li {margin-bottom: 10px; width: 92px;}
+	.filter-radio li input {display: none;}
+	.filter-op-check {
+		padding: 6px 16px;
+		border: 1px solid #f6f6f6;
+		border-radius: 20px;
+		cursor: pointer;
+	}
+	.filter-op:checked + label {background: #68ade2;}
+	.filter button {margin-top: 20px; width: 100%;}
+
+	#loading {margin-top: 60px; text-align: center;}
+}

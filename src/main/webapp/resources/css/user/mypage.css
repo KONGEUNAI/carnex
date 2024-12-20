@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+section h4, section a, section p {font-family:"pretendard"; color: #333;}
+
+h4 {font-size: 24px;}
+h4 i {padding-right: 10px;}
+
+
+
+section {
+  margin-top: 200px; width: 1300px; 
+  background: #f6f6f6; 
+  border-radius: 10px; 
+  box-shadow: 1px 1px 6px 0px rgba(9, 9, 9, 0.5) inset;
+}
+
+.pro {display: flex; justify-content: space-between; align-items: center; padding: 20px 40px;}
+.pro img {width: 100px; height: 100px; border-radius: 50%; object-fit: cover;}
+.pro-btn {display: flex; align-items: center;}
+.pro-btn a {margin-left: 20px;}
+.btn-info {
+  display: flex; justify-content: space-between; align-items: center; padding: 0 8px;
+  width: 108px; height: 36px;
+  text-align: center; letter-spacing: 1px; text-transform: uppercase;
+  border: 1px solid #333; border-radius: 4px;
+  transition: all 0.2s linear;
+}
+.btn-info:hover {background: #333; color: #F6F6F6;}
+.btn-info:hover > p {color: #F6F6F6;}
+.pro-info-wrap i {font-size: 24px;}
+.pro-info-wrap a:last-child {margin-top: 10px;}
+
+.btn-info:hover {background: #333; color: #f6f6f6;}
+.btn-info:hover > p {color: #f6f6f6;}
+
+.status {display: flex; justify-content: space-between; align-items: center; color: #333; width: 560px;}
+.status ul {display: flex; justify-content: space-between; align-items: center;}
+.status ul li {display: flex; align-items: center;}
+.status ul li p {
+  width: 60px; height: 40px; 
+  text-align: center; line-height: 40px;
+  border-radius: 5px; background: #eee;
+  box-shadow: 1px 1px 6px 0px rgba(9, 9, 9, 0.5);
+}
+.status ul li i {padding: 0 10px;}
+.status-select {
+  background: #68ade2 !important; color: #f6f6f6;
+}
+
+.info-tab {
+  width: 100%;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+
+
+.tab {display: flex; justify-content: space-between;}
+.tab li {
+  width: calc(1300px/8); height: 80px; 
+  text-align: center; cursor: pointer;
+}
+.tab li:hover {background: #c8353e;}
+.tab li:hover a i, .tab li:hover a p {color: #f6f6f6;}
+.tab li a {padding: 10px;}
+.tab li.on {background: #c8353e;}
+.tab li.on a i, .tab li.on a p {color: #f6f6f6;}
+
+.tab li a i {font-size: 29px;}
+
+.tab-content {display: none;}
+.tab-content.on {display: flex; justify-content: space-between; flex-wrap: wrap; margin: 0 auto; width: 1000px;}
+.tab-btn div {margin-right: 10px;}
+.tab-btn a:nth-child(2) {margin-left: 10px;}
+
+
+
+.info-wrap {padding: 60px 0 80px;}
+.user-info, .status-info, .status-null {padding: 20px; width: 500px;}
+.user-info ul, .status-info ul, .status-null ul {
+  margin-top: 20px; border-radius: 10px; padding: 10px;
+  box-shadow: 1px 1px 6px 0px rgba(9, 9, 9, 0.5);
+}
+.user-info ul li, .status-info ul li, .status-null ul li {
+  display: flex; align-items: center; padding: 0 20px; height: 40px;
+  font-size: 16px; border-bottom: 1px solid #d9d9d9;
+}
+.user-info ul li:last-child, .status-info ul li:last-child, .status-null ul li:last-child {border-bottom: none;}
+.user-info ul li p:first-child, .status-info ul li p:first-child {width: 100px; font-weight: 700;}
+.status-null ul li p:first-child {width:240px; font-weight: 700;}
+
+.order {  
+  display: flex; justify-content: space-between; margin-top: 20px; padding: 10px; width: 100%;
+  border-radius: 10px; box-shadow: 1px 1px 6px 0px rgba(9, 9, 9, 0.5);
+}
+.order img {border-radius: 10px; width: 500px; background: #c8353e; object-fit: cover;}
+#tab4 .order .order-info {width: 100%; margin: 72px 0 0 20px;}
+#tab3 .order .order-info {width: 100%; margin: 40px 0 0 20px;}
+.order-info ul {margin-top: 10px;}
+.order-info ul li {
+  display: flex; align-items: center; padding: 0 20px; height: 40px;
+  font-size: 16px; border-bottom: 1px solid #d9d9d9;
+}
+.order-info ul li:last-child {border-bottom: none;}
+.order-info ul li p:first-child {width: 100px; font-weight: 700;}
+.order-info > .tab-btn {display: flex; justify-content: space-between;}
+.order-info > .tab-btn a {width: 100%; margin-top: 20px;}
+
+.card-registr {  
+  margin-top: 20px; border-radius: 10px; padding: 10px; width: 1000px;
+  box-shadow: 1px 1px 6px 0px rgba(9, 9, 9, 0.5);
+}
+.card-registr li {
+  display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;
+  font-size: 16px; border-bottom: 1px solid #d9d9d9;
+}
+.card-registr li:last-child {border-bottom: none;}
+.card-registr li img {
+  width: 120px; height: 80px;
+  border-radius: 10px; object-fit: cover;
+}
+
+
+
+#tab5 > div:first-child {margin-bottom: 40px;}
+.post ul {  
+  margin-top: 20px; border-radius: 10px; padding: 10px; width: 1000px;
+  box-shadow: 1px 1px 6px 0px rgba(9, 9, 9, 0.5);
+}
+.post ul li, .post-txt, .post-btn {display: flex; justify-content: space-between; align-items: center;}
+.post ul li {
+  padding: 0 20px; height: 60px;
+  font-size: 16px; border-bottom: 1px solid #d9d9d9;
+}
+.post ul li:first-child {font-weight: 700;}
+.post ul li:last-child {border-bottom: none;}
+
+.post-txt p:nth-child(1) {width: 440px; text-align: center; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.post-txt p:nth-child(2) {width: 80px; text-align: center;}
+.post-txt p:nth-child(3) {width: 120px; text-align: center;}
+
+.post-btn a:first-child {margin-right:10px;}
+
+
+
+
+.coupon-registr {  
+  margin-top: 20px; border-radius: 10px; padding: 10px; width: 1000px;
+  box-shadow: 1px 1px 6px 0px rgba(9, 9, 9, 0.5);
+}
+.coupon-registr li {
+  display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;
+  font-size: 16px; border-bottom: 1px solid #d9d9d9;
+}
+.coupon-registr li:last-child {border-bottom: none;}
+.coupon-img {
+  width: 140px; height: 80px;
+  text-align: center; line-height: 77px; font-size: 20px; font-weight: 700;
+  border: 2px solid #333; border-radius: 5px; 
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3);
+}
+.coupon-img p {color: #333;}
+
+
+
+.alarm-registr {  
+  margin-top: 20px; border-radius: 10px; padding: 10px; width: 1000px;
+  box-shadow: 1px 1px 6px 0px rgba(9, 9, 9, 0.5);
+}
+.alarm-registr li {
+  display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;
+  font-size: 16px; border-bottom: 1px solid #d9d9d9;
+}
+.alarm-registr li:last-child {border-bottom: none;}
+.alarm-registr li img {
+  width: 120px; height: 80px;
+  border-radius: 10px; background: lightcoral;
+}
+
+.tab-btn > div {border: 1px solid #333; color: #333;}
+
+.tab3-img {
+  width: 120px;
+  height: 80px;
+  background: url('/resources/images/card-storage/card-01.jpg') no-repeat center center;
+  border-radius: 10px;
+  background-size: cover;
+}
