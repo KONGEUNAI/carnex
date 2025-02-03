@@ -195,21 +195,13 @@ CREATE TABLE reservation_tbl (
 
 # 구현한 기능들
 
- <b>1. 회원가입 & 회원로그인 & 직원로그인</b>
+ <b>1. 회원가입 & 회원로그인 & 직원로그인 & 로그아웃</b>
  ![image](https://github.com/user-attachments/assets/f44e5250-0752-45f2-9f77-5e3d8d55459b)
  - 회원가입 시 입력한 비밀번호는 BcryptpasswordEncoder으로 인코딩되어 DB에 저장됩니다.    
  - 회원가입과 로그인을 탭 기능으로 한 화면에서 처리하도록 구현했습니다.
    
- <b>2. 회원 로그인</b>
- ![image](https://user-images.githubusercontent.com/63082842/106240841-53524500-6248-11eb-884c-5c51142c0813.png)
- 
- <b>3. 직원 로그인</b>
- ![image](https://user-images.githubusercontent.com/63082842/106241091-c8be1580-6248-11eb-99b1-bd787c8ab9aa.png)
- 
- <b>4. 로그아웃</b>
- 
- <b>5. 유저메인페이지</b>
- ![image](https://user-images.githubusercontent.com/63082842/106241659-c14b3c00-6249-11eb-90f6-c3230a020bb4.png)
+ <b>2. 유저메인페이지</b>
+ ![image]((https://github.com/user-attachments/assets/85c644c6-3b8e-4aec-83b5-773c64a07ff2))
  - Carousel을 활용하였습니다.
  - grid Layout을 활용하였습니다.
  
