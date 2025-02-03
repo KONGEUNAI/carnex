@@ -201,7 +201,7 @@ CREATE TABLE reservation_tbl (
  - 회원가입과 로그인을 탭 기능으로 한 화면에서 처리하도록 구현했습니다.
    
  <b>2. 유저메인페이지</b>
- ![image]((https://github.com/user-attachments/assets/85c644c6-3b8e-4aec-83b5-773c64a07ff2))
+ ![image](https://github.com/user-attachments/assets/85c644c6-3b8e-4aec-83b5-773c64a07ff2)
  - Carousel을 활용하였습니다.
  - grid Layout을 활용하였습니다.
  
