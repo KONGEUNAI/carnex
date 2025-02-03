@@ -195,7 +195,7 @@ CREATE TABLE reservation_tbl (
 
 # 구현한 기능들
  <b>1. 회원가입&회원로그인&직원로그인</b>
- ![Image](https://github.com/user-attachments/assets/f44e5250-0752-45f2-9f77-5e3d8d55459b.png)
+ ![image](https://github.com/user-attachments/assets/f44e5250-0752-45f2-9f77-5e3d8d55459b.png)
  - 회원가입 시 입력한 비밀번호는 BcryptpasswordEncoder으로 인코딩되어 DB에 저장됩니다.    
  - 회원가입과 로그인을 탭 기능으로 한 화면에서 처리하도록 구현했습니다.
    
