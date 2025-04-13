@@ -101,7 +101,6 @@ public class AdminStaffController {
 			svo.setStaff_img(staff_img);
 		}
 		
-		// 수정 페이지에서 업로드한 이미지가 있으면 DB에 새로 저장
 		if (!file.isEmpty()) {
 			String uploadFolder = "D:\\carnex\\workspace\\carnex\\src\\main\\webapp\\resources\\img\\staff";
 			String originalFileName = file.getOriginalFilename();
