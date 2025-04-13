@@ -198,49 +198,49 @@ CREATE TABLE reservation_tbl (
  <b>1. 회원가입 & 회원로그인 & 직원로그인 & 로그아웃</b>
  ![image](https://github.com/user-attachments/assets/f44e5250-0752-45f2-9f77-5e3d8d55459b)
  - 회원가입 시 입력한 비밀번호는 BcryptpasswordEncoder으로 인코딩되어 DB에 저장됩니다.    
- - 회원가입과 로그인을 탭 기능으로 한 화면에서 처리하도록 구현했습니다.
+ - 회원가입과 로그인을 탭 기능으로 한 화면에서 처리하도록 구현했습니다.<br>
    
  <b>2. 유저메인페이지</b>
  ![image](https://github.com/user-attachments/assets/85c644c6-3b8e-4aec-83b5-773c64a07ff2)
  - 이미지 콘텐츠의 효과적인 제공을 위해 Carousel 형태의 UI를 적용하였습니다.
- - 요소의 정렬과 배치를 위해 Grid Layout을 사용하여 화면 구성을 체계적으로 구현하였습니다.
+ - 요소의 정렬과 배치를 위해 Grid Layout을 사용하여 화면 구성을 체계적으로 구현하였습니다.<br>
  
  <b>6. 차종별 검색</b>
  ![Image](https://github.com/user-attachments/assets/bada1fc0-1e95-4e58-8d04-131d394d9ff3)
  - SELECT문을 활용하여 car_type에 keyword가 포함된 데이터만 검색합니다. (LIKE '%keyword%')
  - 필터링 기능은 화면에 고정되어 있어 사용자가 페이지를 스크롤하더라도 지속적으로 활용할 수 있게 하였습니다.
- - car_status가 '예약중' 또는 '판매완료'가 아닌 것만 가져오고, 즉 판매 가능한 차량만 불러옵니다.
+ - car_status가 '예약중' 또는 '판매완료'가 아닌 것만 가져오고, 즉 판매 가능한 차량만 불러옵니다.<br>
  
  <b>7. 전체 차량 페이지</b>
  ![Image](https://github.com/user-attachments/assets/16bb5f82-65a1-499a-9b2a-59550d7ca8d4)
  - 판매 가능한 차량의 전체 목록을 보여줍니다.
- - '구매하러 가기' 버튼을 클릭하여 방문 상담 예약을 할 수 있습니다.
+ - '구매하러 가기' 버튼을 클릭하여 방문 상담 예약을 할 수 있습니다.<br>
 
  <b>8. 게시판 페이지</b>
  ![Image](https://github.com/user-attachments/assets/4412d433-f992-4b6a-bac8-527afcfee1cb)
- - 사용자가 글을 작성, 수정, 삭제할 수 있는 게시판 기능을 통해 자유로운 의견 개진 및 커뮤니케이션이 가능하도록 구성하였습니다.
+ - 사용자가 글을 작성, 수정, 삭제할 수 있는 게시판 기능을 통해 자유로운 의견 개진 및 커뮤니케이션이 가능하도록 구성하였습니다.<br>
 
- <b>9. 로그인 시 상단 메뉴 추가</b>
+ <b>9. 로그인 시 상단 메뉴 추가</b><br>
  <b>회원 상단바</b>
  ![Image](https://github.com/user-attachments/assets/eff34c49-bdbe-41d7-aa98-88e48471b7f1)
  <b>비회원 상단바</b>
  ![Image](https://github.com/user-attachments/assets/5083acd2-8d82-4c69-9904-df9cbd32d74b)
- - 상단바의 특정 기능은 회원에 한해서만 접근할 수 있으며, 탈퇴한 회원 혹은 비회원은 매물 조회 및 게시판 기능을 이용할 수 없습니다.
+ - 상단바의 특정 기능은 회원에 한해서만 접근할 수 있으며, 탈퇴한 회원 혹은 비회원은 매물 조회 및 게시판 기능을 이용할 수 없습니다.<br>
 
  <b>10. 정보수정 클릭 시 비밀번호 재확인</b>
  ![Image](https://github.com/user-attachments/assets/e90bc2d7-cf13-49a7-93d8-7333f9ff3dd9)
  - userMemberMapper.xml에서 주어진 user_id에 해당하는 사용자의 비밀번호를 DB에서 조회하고, 암호화된 비밀번호를 반환받아 사용자가 입력한 비밀번호와 비교하여 인증을 수행합니다.
  - 사용자가 입력한 비밀번호(user_pwd)와 데이터베이스에 저장된 비밀번호를 비교하여, 일치할 경우 회원 정보 수정 페이지로 이동합니다.
- - 불일치 시 본인 인증 오류 메시지를 띄운 후 비밀번호 입력 페이지로 리다이렉트합니다.
+ - 불일치 시 본인 인증 오류 메시지를 띄운 후 비밀번호 입력 페이지로 리다이렉트합니다.<br>
  
  <b>11. 회원정보 수정</b>
  ![Image](https://github.com/user-attachments/assets/56ea296c-dd91-4a86-b860-1e4303f274a9)
- - 정보 수정 페이지에서 회원은 손쉽게 정보 수정이 가능합니다.
+ - 정보 수정 페이지에서 회원은 손쉽게 정보 수정이 가능합니다.<br>
    
  <b>12. 회원 마이페이지</b>
  ![Image](https://github.com/user-attachments/assets/af684615-494e-4627-937d-ba6640669958)
  - 마이페이지는 회원의 기본 정보, 계약 및 예약 내역, 게시글과 댓글 활동, 카드 등록 현황 등을 탭 형태로 구분하여 제공하는 통합 사용자 정보 관리 기능입니다.
- - 각 내역은 관련 차량 및 담당 직원 정보와 함께 조회할 수 있도록 구성되어 있습니다.
+ - 각 내역은 관련 차량 및 담당 직원 정보와 함께 조회할 수 있도록 구성되어 있습니다.<br>
 
  <b>13. 상세상품 페이지 - 상단</b>
  ![image](https://user-images.githubusercontent.com/63082842/106246754-f491c900-6251-11eb-8b09-4ef661d833be.png)
