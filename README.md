@@ -1,4 +1,4 @@
-# Spring 중고차 플랫폼 프로젝트
+![image](https://github.com/user-attachments/assets/6222a1e0-b0c7-46c0-8abf-3c4b657f6751)# Spring 중고차 플랫폼 프로젝트
 
 ### 프로젝트 기간 : 24.07.04 ~ 24.12.13
 ### 프로젝트 수행자 : 공은애(kea4150@gmail.com)
@@ -242,31 +242,32 @@ CREATE TABLE reservation_tbl (
  - 마이페이지는 회원의 기본 정보, 계약 및 예약 내역, 게시글과 댓글 활동, 카드 등록 현황 등을 탭 형태로 구분하여 제공하는 통합 사용자 정보 관리 기능입니다.
  - 각 내역은 관련 차량 및 담당 직원 정보와 함께 조회할 수 있도록 구성되어 있습니다.<br>
 
- <b>13. 상세상품 페이지 - 상단</b>
- ![image](https://user-images.githubusercontent.com/63082842/106246754-f491c900-6251-11eb-8b09-4ef661d833be.png)
- - product 테이블의 값을 select 하여 보여줍니다.
- - 바로구매 버튼 클릭 시 결제페이지로 이동합니다. (로그인 시에만)
- - 장바구니 버튼 클릭 시 장바구니에 추가됩니다. (로그인 시에만)
- - 찜 버튼 클릭 시 찜목록에 추가됩니다. (로그인 시에만)
- ![image](https://user-images.githubusercontent.com/63082842/106248073-d0cf8280-6253-11eb-9bcc-60baca222f17.png)
-  - 로그인 상태에서 버튼 클릭 시
- ![image](https://user-images.githubusercontent.com/63082842/106248122-e2188f00-6253-11eb-8e80-7bfa532fc7ed.png)
-  - 비로그인 상태에서 버튼 클릭 시
-  - 회원가입 클릭 시 회원가입 페이지로 이동합니다.
+ <b>13. 차량 상세 페이지 (차량 정보 확인 및 방문 예약)</b>
+ ![Image](https://github.com/user-attachments/assets/40659b05-aeeb-4573-ac4d-065506acac3d)
+ - 예약 처리 기능은 사용자가 입력한 예약 정보를 저장한 후, 해당 예약의 상세 정보를 조회하여 예약 완료 페이지로 리다이렉트하는 방식으로 구현되어 있습니다.
  
  <b>14. 계약하기</b>
- ![image](https://user-images.githubusercontent.com/63082842/106247326-b5b04300-6252-11eb-854d-2dd2896be434.png)
- - 비밀번호 확인 후 일치하면 상세 페이지로 이동합니다.
+ ![Image](https://github.com/user-attachments/assets/f2b35593-41fc-4777-b370-edbf9c74dc1d)
+ ![Image](https://github.com/user-attachments/assets/cd570482-0d09-446a-83ac-fed389b5d7bb)
+ - 방문 상담 고객 중 구매 의사를 밝힌 고객이 있다면, 직원은 어드민 페이지의 '예약중인 차량' 목록에서 해당 차종을 선택하여 계약을 할 수 있습니다.
+ - 계약 페이지에서 직원은 유저찾기, 카드찾기 기능으로 회원 정보를 빠르게 입력할 수 있습니다.
  
  <b>15. 어드민 부터 대시보드</b>
- ![image](https://user-images.githubusercontent.com/63082842/106247390-cf518a80-6252-11eb-8cbd-bf39dfb39a6f.png)
- - 보고있던 상품 내용을 함께 불러오며, 상품 사진 클릭 시 상품 페이지로 이동할 수 있습니다.
+ ![Image](https://github.com/user-attachments/assets/57d82c8a-f8a6-4019-b33a-5271c88e5da3)
+ - 직원은 로그인하면 어드민 대시보드 페이지로 이동합니다.
+ - 대시보드에서는 직원, 회원수 및 차량 판매상태 및 회원의 선호차량, 선호가격대와 자신의 방문예약리스트를 확인할 수 있습니다.
 
  <b>16. 회원관리</b>
- ![image](https://user-images.githubusercontent.com/63082842/106247390-cf518a80-6252-11eb-8cbd-bf39dfb39a6f.png)
+ ![Image](https://github.com/user-attachments/assets/41e20857-dbbe-43da-930b-c187dcd1278c)
+ - 직원은 회원 관리 기능을 활용하여 회원 가입이 어려운 고객을 대신해 회원 가입 절차를 진행할 수 있습니다.
+ - 회원 목록을 통해 각 회원의 상태를 조회하고 관리할 수 있는 권한을 가집니다.
+ - 필터 기능으로 손쉽게 회원 검색이 가능합니다.
 
  <b>17. 매물관리 판매상태별 메뉴</b>
- ![image](https://user-images.githubusercontent.com/63082842/106247390-cf518a80-6252-11eb-8cbd-bf39dfb39a6f.png)
+ ![Image](https://github.com/user-attachments/assets/0e4282a8-c918-4050-bbbb-e9de34216378)
+ - 직원은 매물 관리 기능의 매물 등록 탭을 활용하여 매물을 등록할 수 있습니다.
+ - 메뉴의 차량 목록(판매중인), 예약중인 차량, 판매완료 차량 직관적으로 확인이 가능합니다.
 
  <b>18. 문의 관리</b>
- ![image](https://user-images.githubusercontent.com/63082842/106247390-cf518a80-6252-11eb-8cbd-bf39dfb39a6f.png)
+ ![Image](https://github.com/user-attachments/assets/7ce57431-a0d5-45fe-b7db-42c8f4f48a11)
+ - 1:1 문의 조회 기능으로 직원은 회원의 문의 내역을 확인하고 답글을 작성할 수 있습니다.
