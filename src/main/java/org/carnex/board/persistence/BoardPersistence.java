@@ -24,13 +24,10 @@ public interface BoardPersistence {
 	
 	public int getCount(String searchType, String keyword) throws Exception;
 	
-	
 	public Integer getBoardNum() throws Exception;
 	
-	
 	public void upReplyCnt(ReplyVO rvo) throws Exception;
-	
-	//public void downReplyCnt(@Param("bno") int bno, @Param("amount") int amount) throws Exception;
+
 	public void downReplyCnt(@Param("bno") int bno) throws Exception;
 
 }
