@@ -77,22 +77,20 @@ public class AdminGoodsController {
 	@GetMapping("/modify")
 	public void modify(@RequestParam("car_num") int car_num, Model model) throws Exception{
 		GoodsVO gvo = goodsService.getCarOne(car_num);
-		model.addAttribute("modify", gvo); //���̵� �ش��ϴ� mvo�� ����ó����
+		model.addAttribute("modify", gvo); 
 	}
 	
 	@PostMapping("/modify")
 	public String modify(HttpServletRequest request, GoodsVO gvo,
 			@RequestParam("uploadFile") MultipartFile file, @RequestParam("carImage") MultipartFile[] carImage) throws Exception{
 		int car_num = Integer.parseInt(request.getParameter("car_num"));
-		
-		// 수정 페이지에서 업로드한 이미지가 없으면 기존 DB에 저장된 경로로 다시 저장
+
 		if (file.isEmpty()) {
 			GoodsVO dbgvo = goodsService.getCarOne(car_num);
 			String thumbimg = dbgvo.getCar_thumbimg();
 			gvo.setCar_thumbimg(thumbimg);
 		}
 		
-		// 수정 페이지에서 업로드한 이미지가 있으면 DB에 새로 저장
 		if (!file.isEmpty()) {
 			String uploadFolder = "D:\\carnex\\workspace\\carnex\\src\\main\\webapp\\resources\\img\\goods";
 			String originalFileName = file.getOriginalFilename();
@@ -106,14 +104,12 @@ public class AdminGoodsController {
 		}
 		
 		System.out.println(carImage.length);
-		// 수정페이지에서 업로드한 이미지들이 없으면 기존 DB에 저장된 경로들로만 다시 저장
 		if (carImage.length == 1) {
 			GoodsVO dbgvo = goodsService.getCarOne(car_num);
 			String img = dbgvo.getCar_img();
 			gvo.setCar_img(img);
 		}
-		
-		// 수정페이지에서 업로드한 이미지들이 있으면 DB에 새로 저장
+
 		if (carImage.length>1) {
 			String detailFolder = "D:\\carnex\\workspace\\carnex\\src\\main\\webapp\\resources\\img\\goods\\detail";
 			List<String> detailImagePaths = new ArrayList<>();
