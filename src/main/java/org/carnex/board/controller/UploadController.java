@@ -79,8 +79,6 @@ public class UploadController {
 		return new ResponseEntity<>(list, HttpStatus.OK);
 	}
 
-	
-	// 첨부 파일의 중복 처리와 폴더에 많은 첨부 파일 생성 처리
 	private String getFolder() {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		Date date = new Date( );
@@ -89,8 +87,6 @@ public class UploadController {
 		return str.replace("-", File.separator);
 	}
 	
-	
-	// 이미지 파일의 경우 섬네일 이미지 생성
 	private boolean checkImageType(File file) {
 		try {
 			String contentType = Files.probeContentType(file.toPath( ));
@@ -101,8 +97,6 @@ public class UploadController {
 		return false;
 	}
 	
-	
-	// 섬네일 이미지 브라우저로 전송
 	@GetMapping("/display")
 	@ResponseBody
 	public ResponseEntity<byte[]> getFile(String fileName) {
@@ -119,8 +113,6 @@ public class UploadController {
 		return result;
 	}
 	
-
-	// 첨부 파일 다운로드 및 원본 이미지 보여주기
 	@GetMapping(value="/download", produces=MediaType.APPLICATION_OCTET_STREAM_VALUE)
 	@ResponseBody
 	public ResponseEntity<Resource> downloadFile(@RequestHeader("User-Agent")String userAgent, String fileName) {
@@ -152,8 +144,6 @@ public class UploadController {
 		return new ResponseEntity<Resource>(resource, headers, HttpStatus.OK);
 	}
 
-
-	// 첨부파일 삭제
 	@PostMapping("/deleteFile")
 	@ResponseBody
 	public ResponseEntity<String> deleteFile(String fileName, String type) {
