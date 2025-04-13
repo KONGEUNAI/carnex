@@ -202,45 +202,45 @@ CREATE TABLE reservation_tbl (
    
  <b>2. 유저메인페이지</b>
  ![image](https://github.com/user-attachments/assets/85c644c6-3b8e-4aec-83b5-773c64a07ff2)
- - Carousel을 활용하였습니다.
- - grid Layout을 활용하였습니다.
+ - 이미지 콘텐츠의 효과적인 제공을 위해 Carousel 형태의 UI를 적용하였습니다.
+ - 요소의 정렬과 배치를 위해 Grid Layout을 사용하여 화면 구성을 체계적으로 구현하였습니다.
  
- <b>6. 상단바 차종별 검색</b>
- ![image](https://user-images.githubusercontent.com/63082842/106241762-ec359000-6249-11eb-8d99-5bc8ca0e8397.png)
- - SELECT문을 활용하여 company 테이블의 모든 회사명을 불러옵니다. (회사가 추가되어도 따로 수정할 필요가 없습니다.)
- - 모든 페이지에 header와 상단바가 존재하여, filter를 사용하여 모든 페이지에서 사용할 수 있게 하였습니다.
+ <b>6. 차종별 검색</b>
+ ![Image](https://github.com/user-attachments/assets/41bdeea7-ec31-445c-8efc-a1e2ea02781d)
+ - SELECT문을 활용하여 car_type에 keyword가 포함된 데이터만 검색합니다. (LIKE '%keyword%')
+ - 필터링 기능은 화면에 고정되어 있어 사용자가 페이지를 스크롤하더라도 지속적으로 활용할 수 있게 하였습니다.
+ - car_status가 '예약중' 또는 '판매완료'가 아닌 것만 가져오고, 즉 판매 가능한 차량만 불러옵니다.
  
- <b>7. 차종별 상품 페이지</b>
- ![image](https://user-images.githubusercontent.com/63082842/106244992-19387180-624f-11eb-9255-987a3590edcc.png)
+ <b>7. 전체 차량 페이지</b>
+ ![Image](https://github.com/user-attachments/assets/ca095872-6aac-49f4-8cec-16a939bd43ac)
+ - 판매 가능한 차량의 전체 목록을 보여줍니다.
+ - '구매하러 가기' 버튼을 클릭하여 방문 상담 예약을 할 수 있습니다.
+
+ <b>8. 게시판 페이지</b>
+ ![Image](https://github.com/user-attachments/assets/62bdf6ab-533c-4afd-9c5c-cf27b2ec4986)
+ - 사용자가 글을 작성, 수정, 삭제할 수 있는 게시판 기능을 통해 자유로운 의견 개진 및 커뮤니케이션이 가능하도록 구성하였습니다.
+
+ <b>9. 로그인 시 상단 메뉴 추가</b>
+ ![Image](https://github.com/user-attachments/assets/eff34c49-bdbe-41d7-aa98-88e48471b7f1)
+ ![Image](https://github.com/user-attachments/assets/5083acd2-8d82-4c69-9904-df9cbd32d74b)
+ - 상단바의 특정 기능은 회원에 한해서만 접근할 수 있으며, 탈퇴한 회원 혹은 비회원은 매물 조회 및 게시판 기능을 이용할 수 없습니다.
+
+ <b>10. 정보수정 클릭 시 비밀번호 재확인</b>
+ ![Image](https://github.com/user-attachments/assets/d693d776-aa8a-477a-aa0f-c76b47467a9c)
+ - userMemberMapper.xml에서 주어진 user_id에 해당하는 사용자의 비밀번호를 DB에서 조회하고, 암호화된 비밀번호를 반환받아 사용자가 입력한 비밀번호와 비교하여 인증을 수행합니다.
+ - 사용자가 입력한 비밀번호(user_pwd)와 데이터베이스에 저장된 비밀번호를 비교하여, 일치할 경우 회원 정보 수정 페이지로 이동합니다.
+ - 불일치 시 본인 인증 오류 메시지를 띄운 후 비밀번호 입력 페이지로 리다이렉트합니다.
  
- <b>8. 전체 차량 페이지</b>
- ![image](https://user-images.githubusercontent.com/63082842/106245244-82b88000-624f-11eb-9771-98bec7015d12.png)
- - 검색어를 포함하고 있는 상품명과 회사의 모든 결과를 보여줍니다.
+ <b>11. 회원정보 수정</b>
+ ![Image](https://github.com/user-attachments/assets/dd076be1-c5a9-48d0-bcc6-ac5834769d3f)
+ - 정보 수정 페이지에서 회원은 손쉽게 정보 수정이 가능합니다.
+   
+ <b>12. 회원 마이페이지</b>
+ ![Image](https://github.com/user-attachments/assets/eb6b059c-5e8e-4b9f-bf61-7a4faa35134b)
+ - 마이페이지는 회원의 기본 정보, 계약 및 예약 내역, 게시글과 댓글 활동, 카드 등록 현황 등을 탭 형태로 구분하여 제공하는 통합 사용자 정보 관리 기능입니다.
+ - 각 내역은 관련 차량 및 담당 직원 정보와 함께 조회할 수 있도록 구성되어 있습니다.
 
- <b>9. 게시판 페이지</b>
- ![image](https://user-images.githubusercontent.com/63082842/106244815-d8d8f380-624e-11eb-9eee-7b886d0f8d06.png)
- - 유저가 상품을 구매하면 product 테이블의 구매수가 오르게 되고, ORDER BY soldCount DESC을 사용하여 판매량 순으로 조회한 결과입니다.
-
- <b>10. 검색기능</b>
- ![image](https://user-images.githubusercontent.com/63082842/106245360-aa0f4d00-624f-11eb-9e85-1a0315e1bb34.png)
- - 좌측에 라디오박스의 브랜드 중 클릭된 브랜드의 상품만 보는 기능입니다.
- 
- <b>11. 로그인 시 상단 메뉴 추가</b>
- ![image](https://user-images.githubusercontent.com/63082842/106245552-f8245080-624f-11eb-9a16-4b307b6884c4.png)
- - 유저의 등급이 admin 이상이면 상품등록, 상품수정 메뉴가 생깁니다.
- - 유저의 등급이 기본 이상이면 찜, 장바구니, 정보수정, 로그아웃 메뉴가 생깁니다.
-
- <b>12. 정보수정 클릭 시 비밀번호 재확인</b>
- ![image](https://user-images.githubusercontent.com/63082842/106245663-2c980c80-6250-11eb-9caa-fb189732be99.png)
- - 유저가 자신이 설정한 비밀번호를 입력하면, 입력받은 값을 SHA-256 인코딩을 적용하여 DB에 저장된 값과 비교합니다.
-
- <b>13. 회원정보 수정</b>
- ![image](https://user-images.githubusercontent.com/63082842/106245704-3faadc80-6250-11eb-93c0-20da739c78c3.png)
-
- <b>14. 회원 마이페이지</b>
- ![image](https://user-images.githubusercontent.com/63082842/106245704-3faadc80-6250-11eb-93c0-20da739c78c3.png)
- 
- <b>15. 상세상품 페이지 - 상단</b>
+ <b>13. 상세상품 페이지 - 상단</b>
  ![image](https://user-images.githubusercontent.com/63082842/106246754-f491c900-6251-11eb-8b09-4ef661d833be.png)
  - product 테이블의 값을 select 하여 보여줍니다.
  - 바로구매 버튼 클릭 시 결제페이지로 이동합니다. (로그인 시에만)
@@ -252,19 +252,19 @@ CREATE TABLE reservation_tbl (
   - 비로그인 상태에서 버튼 클릭 시
   - 회원가입 클릭 시 회원가입 페이지로 이동합니다.
  
- <b>16. 계약하기</b>
+ <b>14. 계약하기</b>
  ![image](https://user-images.githubusercontent.com/63082842/106247326-b5b04300-6252-11eb-854d-2dd2896be434.png)
  - 비밀번호 확인 후 일치하면 상세 페이지로 이동합니다.
  
- <b>17. 어드민 부터 대시보드</b>
+ <b>15. 어드민 부터 대시보드</b>
  ![image](https://user-images.githubusercontent.com/63082842/106247390-cf518a80-6252-11eb-8cbd-bf39dfb39a6f.png)
  - 보고있던 상품 내용을 함께 불러오며, 상품 사진 클릭 시 상품 페이지로 이동할 수 있습니다.
 
- <b>18. 회원관리</b>
+ <b>16. 회원관리</b>
  ![image](https://user-images.githubusercontent.com/63082842/106247390-cf518a80-6252-11eb-8cbd-bf39dfb39a6f.png)
 
- <b>19. 매물관리 판매상태별 메뉴</b>
+ <b>17. 매물관리 판매상태별 메뉴</b>
  ![image](https://user-images.githubusercontent.com/63082842/106247390-cf518a80-6252-11eb-8cbd-bf39dfb39a6f.png)
 
- <b>20. 문의 관리</b>
+ <b>18. 문의 관리</b>
  ![image](https://user-images.githubusercontent.com/63082842/106247390-cf518a80-6252-11eb-8cbd-bf39dfb39a6f.png)
