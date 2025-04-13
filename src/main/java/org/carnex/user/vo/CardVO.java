@@ -14,7 +14,6 @@ public class CardVO {
 	
 	@DateTimeFormat(pattern = "yyyy-MM")
 	private String card_expdate;
-	
 	private int card_cvc;
 	private int card_digit1;
 	private int card_digit2;
