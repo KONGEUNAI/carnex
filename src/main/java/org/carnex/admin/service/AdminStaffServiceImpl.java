@@ -79,47 +79,17 @@ public class AdminStaffServiceImpl implements AdminStaffService {
 		dbdto.setCar_comp(car_comp);
 		dbdto.setCar_ing(car_ing);
 		
-		// carTypeCounts를 담을 리스트
-//        List<Map<String, Object>> carTypeCounts = new ArrayList<>();
-//        List<Map<String, Object>> userWishCounts = new ArrayList<>();
-        
-        // goods_tbl에서 cartype별 차량 개수를 조회
-        List<Map<String, Object>> getAllCount = goodsPersistence.getAllCount();
-        List<Map<String, Object>> getUserWishCount = userMemberPersistence.getUserWishCount();
-        
-    	// 조회된 데이터를 carTypeCounts 리스트에 추가
-//		for (Map<String, Object> row : getAllCount) {
-//		    // row는 이미 Map<String, Object> 형태이므로 직접 값에 접근 가능
-//		    Map<String, Object> carTypeCount = new HashMap<>();
-//		    carTypeCount.put("car_type", row.get("car_type"));  // cartype
-//		    carTypeCount.put("count", row.get("count"));      // 차량 개수
-//		    
-//		    // carTypeCounts에 Map 추가
-//		    carTypeCounts.add(carTypeCount);
-//		}
-//        dbdto.setCarTypeCounts(carTypeCounts);
+        	List<Map<String, Object>> getAllCount = goodsPersistence.getAllCount();
+        	List<Map<String, Object>> getUserWishCount = userMemberPersistence.getUserWishCount();
+
 		dbdto.setCarTypeCounts(getAllCount);
 		
-        // 조회된 데이터를 carTypeCounts 리스트에 추가
-//        for (Map<String, Object> row : getUserWishCount) {
-//        	// row는 이미 Map<String, Object> 형태이므로 직접 값에 접근 가능
-//        	Map<String, Object> userWishCount = new HashMap<>();
-//        	userWishCount.put("user_wishcar", row.get("user_wishcar"));  // user_wishcar
-//        	userWishCount.put("count", row.get("count"));      // 차량 개수
-//        	
-//        	// carTypeCounts에 Map 추가
-//        	userWishCounts.add(userWishCount);
-//        }
-//        dbdto.setUserWishCounts(userWishCounts);
-        dbdto.setUserWishCounts(getUserWishCount);
+        	dbdto.setUserWishCounts(getUserWishCount);
 		
 		List<Map<String, Object>> userWishPrice = userMemberPersistence.getUserWishPrice();
 		System.out.println("=========="+userWishPrice);
 		dbdto.setUserWishPrice(userWishPrice);
-		
-		
-		
-		
+
 		return dbdto;
 	}
 	
