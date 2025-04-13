@@ -33,13 +33,12 @@ public class HomeController {
 	@RequestMapping(value = "/static", method = RequestMethod.GET)
 	public String userIndex(Model model) throws Exception {
 		// SELECT * FROM goods_tbl ORDER BY car_num DESC LIMIT 6, 3;
-        List<GoodsVO> secondGoods = goodsService.secondGoods();
-        // SELECT * FROM goods_tbl ORDER BY car_num DESC LIMIT 6;
-        List<GoodsVO> firstGoods = goodsService.firstGoods();
-
-        // 모델에 데이터를 추가
-        model.addAttribute("secondGoods", secondGoods);
-        model.addAttribute("firstGoods", firstGoods);
+       		 List<GoodsVO> secondGoods = goodsService.secondGoods();
+        	// SELECT * FROM goods_tbl ORDER BY car_num DESC LIMIT 6;
+       		 List<GoodsVO> firstGoods = goodsService.firstGoods();
+		
+	        model.addAttribute("secondGoods", secondGoods);
+	        model.addAttribute("firstGoods", firstGoods);
 		
 		return "/static/member-index";
 	}
@@ -61,22 +60,3 @@ public class HomeController {
 		return "/admin/index";
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
