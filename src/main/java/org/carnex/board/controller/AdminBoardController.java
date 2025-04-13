@@ -77,7 +77,6 @@ public class AdminBoardController {
 	@GetMapping("/register")
 	public void staffRegister() throws Exception {}
 	
-	// �Խù� ��� ������ ó��
 	@PostMapping("/register")
 	public String staffRegister(BoardVO bvo) throws Exception {
 		if (bvo.getAttachList() != null) {
