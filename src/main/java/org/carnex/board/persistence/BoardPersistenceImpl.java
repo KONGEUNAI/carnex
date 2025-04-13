@@ -86,18 +86,6 @@ public class BoardPersistenceImpl implements BoardPersistence {
 		sql.update(namespace + ".upReplyCnt", rvo);
 	}
 
-	/*
-	@Override
-	public void downReplyCnt(int bno, int amount) throws Exception {
-		HashMap map = new HashMap();
-		
-		map.put("bno", bno);
-		map.put("amout", amount);
-		
-		sql.update(namespace+".downReplyCnt", map);
-		
-	}
-	*/
 	@Override
 	public void downReplyCnt(int bno) throws Exception {
 		sql.update(namespace+".downReplyCnt", bno);
