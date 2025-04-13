@@ -154,7 +154,7 @@ public class ConfirmController {
 				rttr.addFlashAttribute("errorMessage", "비밀번호가 다릅니다. 다시 로그인해주세요.");
 				url = "redirect:/confirm";
 			}
-		} else { // ������ִ� ���̵� ���� ���� �α��� ����
+		} else { 
 			session.setAttribute("session", null);
 			rttr.addFlashAttribute("errorMessage", "아이디가 다릅니다. 다시 로그인해주세요.");
 			url = "redirect:/confirm";
