@@ -166,12 +166,6 @@ public class BoardController {
 		return "redirect:/static/board/view?bno="+bvo.getBno();
 	}
 	
-//	@GetMapping("/delete")
-//	public String delete(@RequestParam("bno") int bno) throws Exception {
-//		boardService.delete(bno);
-//		return "redirect:/static/board/list?num=1";
-//	}
-	
 	@GetMapping("/delete")
 	public String delete(@RequestParam("bno") int bno, HttpSession session, HttpServletRequest request) throws Exception {
 		MemberVO mvo = (MemberVO)session.getAttribute("session");
