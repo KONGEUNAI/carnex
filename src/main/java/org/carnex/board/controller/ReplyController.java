@@ -27,16 +27,6 @@ public class ReplyController {
 		return "redirect:/static/board/view?bno="+rvo.getBno();
 	}
 	
-//	@GetMapping("/modify")
-//	public void modify(@RequestParam("bno") int bno, @RequestParam("rno") int rno, Model model) throws Exception {
-//		ReplyVO rvo = new ReplyVO();
-//		rvo.setBno(bno);
-//		rvo.setRno(rno);
-//		
-//		ReplyVO reply = replyService.getReplyOne(rvo);
-//		model.addAttribute("reply", reply);
-//	}
-	
 	@PostMapping("/modify")
 	public String modify(ReplyVO rvo) throws Exception {
 		replyService.modify(rvo);
@@ -52,12 +42,6 @@ public class ReplyController {
 		ReplyVO reply = replyService.getReplyOne(rvo);
 		model.addAttribute("rvo", reply);
 	}
-	
-	
-	
-	
-	
-	
 	
 	@GetMapping("/delete")
 	public String delete(@RequestParam("bno") int bno, @RequestParam("rno") int rno, HttpSession session, HttpServletRequest request) throws Exception {
