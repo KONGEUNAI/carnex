@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6222a1e0-b0c7-46c0-8abf-3c4b657f6751)# Spring 중고차 플랫폼 프로젝트
+# Spring 중고차 플랫폼 프로젝트
 
 ### 프로젝트 기간 : 24.07.04 ~ 24.12.13
 ### 프로젝트 수행자 : 공은애(kea4150@gmail.com)
@@ -269,5 +269,5 @@ CREATE TABLE reservation_tbl (
  - 메뉴의 차량 목록(판매중인), 예약중인 차량, 판매완료 차량 직관적으로 확인이 가능합니다.
 
  <b>18. 문의 관리</b>
- ![Image](https://github.com/user-attachments/assets/7ce57431-a0d5-45fe-b7db-42c8f4f48a11)
+ ![image](https://github.com/user-attachments/assets/6222a1e0-b0c7-46c0-8abf-3c4b657f6751)
  - 1:1 문의 조회 기능으로 직원은 회원의 문의 내역을 확인하고 답글을 작성할 수 있습니다.
