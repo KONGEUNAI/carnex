@@ -10,13 +10,7 @@
 		from attach_tbl
 		where bno = #{bno}
 	</select>
-	<!--
-	<select id="getOldFiles" resultType="org.nextway.domain.BoardAttachVO">
-		select uuid, uploadPath, fileName, fileType, bno
-		from tbl_attach
-		where uploadPath = to_char(sysdate -1, 'yyyy\mm\dd')
-	</select>
-	-->
+
 	<insert id="insert" parameterType="org.carnex.board.vo.BoardAttachVO">
 		insert into attach_tbl (uuid, uploadPath, fileName, fileType, bno)
 		values (#{uuid}, #{uploadPath}, #{fileName}, #{fileType}, #{bno})
